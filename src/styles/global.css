@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  *:focus-visible {
+    outline: 2px solid #f97316;
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: linear-gradient(135deg, #f97316 0%, #fb923c 50%, #fdba74 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-bg {
+    background: radial-gradient(ellipse 80% 50% at 70% 20%, rgba(249, 115, 22, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 40% at 20% 80%, rgba(148, 163, 184, 0.08) 0%, transparent 60%),
+                #020617;
+  }
+
+  .card-hover {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -8px rgba(249, 115, 22, 0.15);
+    border-color: rgba(249, 115, 22, 0.4);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+}
+
+/* FAQ accordion arrow rotation */
+details summary::marker,
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] .faq-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-arrow {
+  transition: transform 0.3s ease;
+}

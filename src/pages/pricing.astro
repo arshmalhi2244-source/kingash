@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PricingCard from '../components/PricingCard.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+import CTASection from '../components/CTASection.astro';
+import { site } from '../data/site.ts';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": site.website },
+      { "@type": "ListItem", "position": 2, "name": "Pricing", "item": `${site.website}/pricing` }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Are there any setup fees?", "acceptedAnswer": { "@type": "Answer", "text": "No setup fees on Growth and Elite. Starter has a one-time setup fee of $199 that covers your initial website build and profile setup." }},
+      { "@type": "Question", "name": "Can I upgrade or downgrade my plan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, you can change your plan at any time. Upgrades take effect immediately; downgrades take effect at the next billing cycle." }}
+    ]
+  }
+];
+
+const pricingFaqs = [
+  { q: "Are there any setup fees?", a: "No setup fees on Growth and Elite. Starter has a one-time setup fee of $199 that covers your initial website build and profile setup." },
+  { q: "Can I upgrade or downgrade my plan?", a: "Yes, you can change your plan at any time. Upgrades take effect immediately; downgrades take effect at the next billing cycle." },
+  { q: "What payment methods do you accept?", a: "We accept all major credit cards, e-transfer, and ACH bank transfers. We invoice monthly at the start of each billing period." },
+  { q: "Is the ad spend included in the package price?", a: "No — the package price covers our management and strategy fees. Ad spend is paid directly to Meta and is in addition to our fee. We recommend $300–500/mo to start." },
+  { q: "What happens if I cancel?", a: "Cancel anytime with 30 days written notice. You'll retain ownership of your website, content, and any accounts we created for you." }
+];
+---
+
+<BaseLayout
+  title="Pricing — Transparent Marketing Plans | KingAsh"
+  description="Simple, transparent pricing for local business marketing. Starter at $499/mo, Growth at $899/mo, Elite at $1,499/mo. No contracts. No hidden fees."
+  schema={schema}
+>
+  <!-- Page Hero -->
+  <section class="hero-bg relative overflow-hidden py-24 lg:py-28">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-1/2 right-1/4 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <nav aria-label="Breadcrumb" class="mb-8 flex justify-center">
+        <ol class="flex items-center gap-2 text-sm text-slate-500">
+          <li><a href="/" class="hover:text-orange-400 transition-colors">Home</a></li>
+          <li class="text-slate-700">/</li>
+          <li class="text-slate-300">Pricing</li>
+        </ol>
+      </nav>
+      <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Transparent Pricing</span>
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mt-3 mb-5">
+        Simple Plans. <span class="gradient-text">Real Results.</span>
+      </h1>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        No contracts. No hidden fees. No confusing add-ons. Pick a plan, grow your business, cancel anytime.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Cards -->
+  <section class="bg-slate-50 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
+        {site.pricing.map((plan, i) => (
+          <div class={`reveal reveal-delay-${i + 1} ${plan.featured ? 'md:-mt-4' : ''}`}>
+            <PricingCard
+              name={plan.name}
+              price={plan.price}
+              period={plan.period}
+              description={plan.description}
+              features={plan.features}
+              cta={plan.cta}
+              ctaHref={plan.ctaHref}
+              featured={plan.featured}
+            />
+          </div>
+        ))}
+      </div>
+
+      <!-- Note -->
+      <p class="text-center text-slate-400 text-sm mt-10 reveal">
+        All plans are month-to-month. Ad spend (for Meta Ads) is billed separately and paid directly to Meta.
+        <a href="/contact" class="text-orange-500 hover:underline ml-1">Questions? Chat with us.</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Feature Comparison -->
+  <section class="bg-white py-20 lg:py-28">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="font-display font-bold text-3xl text-slate-900 mb-3">Compare All Features</h2>
+        <p class="text-slate-500">Every plan includes what you need to compete locally.</p>
+      </div>
+      <div class="overflow-x-auto reveal">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-slate-200">
+              <th class="text-left py-4 pr-6 text-slate-600 font-semibold w-1/2">Feature</th>
+              <th class="py-4 px-4 text-center text-slate-600 font-semibold">Starter</th>
+              <th class="py-4 px-4 text-center text-orange-500 font-bold">Growth</th>
+              <th class="py-4 px-4 text-center text-slate-600 font-semibold">Elite</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["Professional Website", true, true, true],
+              ["Google Business Profile", true, true, true],
+              ["Basic On-page SEO", true, true, true],
+              ["Monthly Reporting", true, true, true],
+              ["Full Local SEO Campaign", false, true, true],
+              ["Meta Ads Management", false, true, true],
+              ["Local Citation Building", false, true, true],
+              ["Monthly Content Creation", false, true, true],
+              ["AI Phone Representative", false, false, true],
+              ["Unlimited Ad Spend Mgmt", false, false, true],
+              ["Dedicated Account Manager", false, false, true],
+              ["24/7 Priority Support", false, false, true],
+            ].map(([feature, starter, growth, elite]) => (
+              <tr class="border-b border-slate-100 hover:bg-slate-50">
+                <td class="py-3.5 pr-6 text-slate-700">{feature}</td>
+                {[starter, growth, elite].map((has, j) => (
+                  <td class={`py-3.5 px-4 text-center ${j === 1 ? 'bg-orange-50' : ''}`}>
+                    {has ? (
+                      <svg class="w-5 h-5 text-orange-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                    ) : (
+                      <svg class="w-5 h-5 text-slate-300 mx-auto" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    )}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing FAQ -->
+  <section class="bg-slate-50 py-20 lg:py-28">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="font-display font-bold text-3xl text-slate-900 mb-3">Pricing Questions</h2>
+        <p class="text-slate-500">Clear answers on billing, plans, and what's included.</p>
+      </div>
+      <div class="divide-y divide-slate-200 border border-slate-200 rounded-2xl px-6 reveal">
+        {pricingFaqs.map((faq) => (
+          <FAQAccordion question={faq.q} answer={faq.a} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline="Not Sure Which Plan Is Right for You?"
+    subtext="Book a free call and we'll tell you exactly what your business needs — and what it doesn't. Honest advice, no upselling."
+    primaryCta="Book a Free Strategy Call"
+    secondaryCta="View Services"
+    secondaryHref="/services"
+  />
+</BaseLayout>

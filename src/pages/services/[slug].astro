@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+import CTASection from '../../components/CTASection.astro';
+import { site } from '../../data/site.ts';
+
+export function getStaticPaths() {
+  return site.services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.name,
+    "description": service.fullDesc,
+    "provider": {
+      "@type": "MarketingAgency",
+      "name": site.name,
+      "url": site.website
+    },
+    "areaServed": "Canada",
+    "offers": {
+      "@type": "Offer",
+      "price": service.price.replace('$', ''),
+      "priceCurrency": "CAD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": site.website },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": `${site.website}/services` },
+      { "@type": "ListItem", "position": 3, "name": service.name, "item": `${site.website}/services/${service.slug}` }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": service.faqs.map((faq) => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": { "@type": "Answer", "text": faq.a }
+    }))
+  }
+];
+---
+
+<BaseLayout
+  title={service.metaTitle}
+  description={service.metaDescription}
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="hero-bg relative overflow-hidden py-24 lg:py-28">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-1/2 right-1/3 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-slate-500">
+          <li><a href="/" class="hover:text-orange-400 transition-colors">Home</a></li>
+          <li class="text-slate-700">/</li>
+          <li><a href="/services" class="hover:text-orange-400 transition-colors">Services</a></li>
+          <li class="text-slate-700">/</li>
+          <li class="text-slate-300">{service.name}</li>
+        </ol>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="text-orange-500 font-semibold text-sm">{service.priceLabel}</span>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mt-2 mb-5">
+          {service.name}
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">{service.fullDesc}</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg shadow-orange-500/30"
+          >
+            Get a Free Quote
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+          <a
+            href={site.phoneHref}
+            class="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-white/40 text-white hover:bg-white/5 font-semibold px-8 py-4 rounded-xl transition-colors"
+          >
+            Call {site.phoneFormatted}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="bg-white py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
+        <div class="reveal">
+          <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">What You Get</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-2 mb-8">
+            Everything Included in {service.name}
+          </h2>
+          <ul class="space-y-4">
+            {service.benefits.map((benefit) => (
+              <li class="flex items-start gap-4">
+                <div class="w-8 h-8 bg-orange-50 border border-orange-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-orange-500" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </div>
+                <p class="text-slate-600 leading-relaxed">{benefit}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Pricing Card -->
+        <div class="reveal reveal-delay-2">
+          <div class="bg-slate-950 border border-orange-500/30 rounded-2xl p-8 sticky top-24">
+            <div class="text-orange-500 font-semibold text-sm mb-3">Pricing</div>
+            <div class="flex items-end gap-2 mb-2">
+              <span class="font-display font-bold text-5xl text-white">{service.price}</span>
+              <span class="text-slate-400 text-sm mb-2">starting price</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-6">Final price depends on your specific needs. Get a custom quote — no obligation.</p>
+            <a
+              href="/contact"
+              class="w-full block text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 rounded-xl transition-colors mb-4 shadow-lg shadow-orange-500/20"
+            >
+              Get a Custom Quote
+            </a>
+            <a
+              href={site.phoneHref}
+              class="w-full block text-center border border-white/20 hover:border-white/30 text-white hover:bg-white/5 font-semibold py-4 rounded-xl transition-colors text-sm"
+            >
+              Call {site.phoneFormatted}
+            </a>
+            <div class="mt-6 pt-6 border-t border-white/10 space-y-2">
+              {["Month-to-month, cancel anytime", "Response within 1 business day", "No hidden fees or surprises"].map((point) => (
+                <div class="flex items-center gap-2 text-slate-400 text-xs">
+                  <svg class="w-3.5 h-3.5 text-orange-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  {point}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="bg-slate-50 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">The Process</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-2 mb-4">
+          How {service.name} Works
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        {service.process.map((step, i) => (
+          <div class={`text-center reveal reveal-delay-${i + 1}`}>
+            <div class="inline-flex items-center justify-center w-14 h-14 bg-orange-500 text-white font-display font-bold text-lg rounded-2xl mb-5 shadow-lg shadow-orange-500/30">
+              {String(step.step).padStart(2, '0')}
+            </div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">{step.title}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="bg-white py-20 lg:py-28">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">FAQ</span>
+        <h2 class="font-display font-bold text-3xl text-slate-900 mt-2 mb-4">
+          Common Questions About {service.name}
+        </h2>
+      </div>
+      <div class="divide-y divide-slate-200 border border-slate-200 rounded-2xl px-6 reveal">
+        {service.faqs.map((faq) => (
+          <FAQAccordion question={faq.q} answer={faq.a} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Services -->
+  <section class="bg-slate-50 py-16 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display font-bold text-2xl text-slate-900 mb-8 text-center">Explore Other Services</h2>
+      <div class="grid sm:grid-cols-3 gap-4">
+        {site.services
+          .filter((s) => s.slug !== service.slug)
+          .map((s) => (
+            <a
+              href={`/services/${s.slug}`}
+              class="bg-white border border-slate-200 hover:border-orange-200 rounded-xl p-5 flex items-center gap-4 transition-colors group"
+            >
+              <div class="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors shrink-0">
+                <div class="w-5 h-5" set:html={s.icon} />
+              </div>
+              <div>
+                <p class="font-semibold text-slate-900 text-sm group-hover:text-orange-500 transition-colors">{s.name}</p>
+                <p class="text-slate-400 text-xs">{s.priceLabel}</p>
+              </div>
+            </a>
+          ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline={`Ready to Get Started with ${service.name}?`}
+    subtext="Get a free, no-obligation quote within 1 business day. We'll show you exactly what we'll do and what results to expect."
+  />
+</BaseLayout>

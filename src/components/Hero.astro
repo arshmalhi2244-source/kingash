@@ -1,0 +1,74 @@
+---
+import { site } from '../data/site.ts';
+---
+
+<section class="hero-bg relative overflow-hidden min-h-[90vh] flex items-center">
+  <!-- Background decorative shapes -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+    <!-- Orange glow orb -->
+    <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"></div>
+    <!-- Subtle grid -->
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 60px 60px;"></div>
+    <!-- Bottom fade -->
+    <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+    <div class="max-w-4xl">
+      <!-- Label -->
+      <div class="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-semibold px-4 py-2 rounded-full mb-8 uppercase tracking-wider">
+        <span class="w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse"></span>
+        AI-Powered Local Marketing
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-display font-bold text-5xl sm:text-6xl lg:text-7xl xl:text-8xl text-white leading-[1.05] mb-6">
+        <span class="block">Outrank.</span>
+        <span class="block">Automate.</span>
+        <span class="block gradient-text">Dominate.</span>
+      </h1>
+
+      <!-- Subtext -->
+      <p class="text-slate-400 text-lg sm:text-xl max-w-2xl leading-relaxed mb-10">
+        We build the digital systems that help {site.address.city}'s brick-and-mortar businesses outcompete anyone online — websites, AI phone reps, Meta ads, and SEO, all under one roof.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4 mb-14">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all duration-200 shadow-lg shadow-orange-500/30 hover:shadow-orange-500/50 hover:scale-[1.02]"
+        >
+          Get Your Free Growth Plan
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+        <a
+          href="/services"
+          class="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-white/40 text-white hover:bg-white/5 font-semibold text-base px-8 py-4 rounded-xl transition-all duration-200"
+        >
+          See Our Services
+        </a>
+      </div>
+
+      <!-- Trust Bar -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 text-sm text-slate-400">
+        <div class="flex items-center gap-2">
+          <div class="flex text-orange-400">
+            {Array(5).fill(null).map(() => (
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <span>4.9 / 5 from 120+ reviews</span>
+        </div>
+        <div class="hidden sm:block w-px h-4 bg-slate-700"></div>
+        <span>150+ local businesses helped</span>
+        <div class="hidden sm:block w-px h-4 bg-slate-700"></div>
+        <span>No long-term contracts</span>
+      </div>
+    </div>
+  </div>
+</section>

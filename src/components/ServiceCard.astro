@@ -1,0 +1,38 @@
+---
+interface Props {
+  slug: string;
+  name: string;
+  shortDesc: string;
+  price: string;
+  icon: string;
+}
+const { slug, name, shortDesc, price, icon } = Astro.props;
+---
+
+<article class="bg-white border border-slate-200 rounded-2xl p-7 flex flex-col gap-5 card-hover cursor-default">
+  <!-- Icon -->
+  <div class="w-12 h-12 bg-orange-50 border border-orange-100 rounded-xl flex items-center justify-center text-orange-500 shrink-0">
+    <div class="w-6 h-6" set:html={icon} />
+  </div>
+
+  <!-- Content -->
+  <div class="flex-1">
+    <h3 class="font-display font-semibold text-xl text-slate-900 mb-2">{name}</h3>
+    <p class="text-slate-500 text-sm leading-relaxed">{shortDesc}</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+    <span class="text-orange-500 font-semibold text-sm">Starting at {price}</span>
+    <a
+      href={`/services/${slug}`}
+      class="inline-flex items-center gap-1.5 text-slate-700 hover:text-orange-500 text-sm font-medium transition-colors group"
+      aria-label={`Learn more about ${name}`}
+    >
+      Learn more
+      <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+      </svg>
+    </a>
+  </div>
+</article>

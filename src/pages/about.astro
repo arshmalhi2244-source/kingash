@@ -1,0 +1,162 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTASection from '../components/CTASection.astro';
+import { site } from '../data/site.ts';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": site.website },
+    { "@type": "ListItem", "position": 2, "name": "About", "item": `${site.website}/about` }
+  ]
+};
+
+const values = [
+  { title: "Local First", desc: "Every decision we make is measured against one question: does this actually help local businesses compete? If not, we don't do it." },
+  { title: "Results Over Reports", desc: "We'd rather show you a new customer than a beautiful deck. We report on revenue and real leads, not impressions." },
+  { title: "Radical Transparency", desc: "You'll always know exactly what we're doing, why we're doing it, and what it's costing. No surprises on your invoice, ever." },
+  { title: "Relentless Improvement", desc: "Markets change. Algorithms change. We stay obsessively up-to-date so you don't have to. You run your business; we handle the digital." }
+];
+---
+
+<BaseLayout
+  title="About KingAsh Marketing Agency — Surrey, BC"
+  description="KingAsh is an AI-powered marketing agency built for local businesses in Surrey, BC and across Canada. Meet the team and learn our story."
+  schema={schema}
+>
+  <!-- Page Hero -->
+  <section class="hero-bg relative overflow-hidden py-24 lg:py-32">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-1/2 left-1/4 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-slate-500">
+          <li><a href="/" class="hover:text-orange-400 transition-colors">Home</a></li>
+          <li class="text-slate-700">/</li>
+          <li class="text-slate-300">About</li>
+        </ol>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Our Story</span>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mt-3 mb-6">
+          Built for the Businesses <span class="gradient-text">That Build Communities</span>
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed">
+          KingAsh started with a simple observation: the best local businesses were losing to worse competitors online — not because they were inferior, but because nobody could find them.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="bg-white py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Why We Started</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-3 mb-6">
+            Great Products Deserve to Be Found
+          </h2>
+          <div class="space-y-4 text-slate-500 leading-relaxed">
+            <p>
+              Before KingAsh, our founder {site.owner.name} worked with dozens of local businesses across the Lower Mainland. The pattern was always the same: incredible food, skilled tradespeople, passionate shop owners — all losing customers to chain competitors with bigger marketing budgets.
+            </p>
+            <p>
+              The problem wasn't the product. It was digital visibility. A restaurant with 4.8 stars and 20 years in the community was getting buried on Google by a franchise that opened six months ago. A family plumbing company was losing calls to a national chain because they had no website and missed every after-hours call.
+            </p>
+            <p>
+              KingAsh was built to fix that. We combine AI-powered tools with local market expertise to give independent businesses the same digital firepower that big brands take for granted — without the enterprise price tag.
+            </p>
+          </div>
+        </div>
+        <!-- Visual block -->
+        <div class="reveal reveal-delay-2 grid grid-cols-2 gap-4">
+          {[
+            { value: "2022", label: "Founded" },
+            { value: "150+", label: "Clients Served" },
+            { value: "$3.2M+", label: "Revenue Generated" },
+            { value: "15+", label: "Cities Served" }
+          ].map(stat => (
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center">
+              <p class="font-display font-bold text-4xl text-orange-500 mb-1">{stat.value}</p>
+              <p class="text-slate-500 text-sm">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="bg-slate-950 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="max-w-3xl mx-auto reveal">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Our Mission</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-3 mb-6">
+          Level the Digital Playing Field for Local Business
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed">
+          Every brick-and-mortar business in Canada deserves to compete online — regardless of their marketing budget. We exist to make that happen through smart AI systems, local expertise, and relentless focus on what actually drives revenue.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="bg-slate-50 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">How We Operate</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-2 mb-4">Our Values</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-6">
+        {values.map((value, i) => (
+          <div class={`bg-white border border-slate-200 rounded-2xl p-7 hover:border-orange-200 transition-colors reveal reveal-delay-${i + 1}`}>
+            <div class="w-10 h-10 bg-orange-500 rounded-xl mb-4"></div>
+            <h3 class="font-display font-bold text-xl text-slate-900 mb-2">{value.title}</h3>
+            <p class="text-slate-500 text-sm leading-relaxed">{value.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Owner Bio -->
+  <section class="bg-white py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-8 lg:p-10 reveal">
+          <div class="flex items-start gap-6 mb-6">
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center text-white font-display font-bold text-2xl shrink-0">
+              AM
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-2xl text-slate-900">{site.owner.name}</h3>
+              <p class="text-orange-500 font-semibold text-sm">{site.owner.title}</p>
+              <p class="text-slate-500 text-sm">{site.name} &bull; {site.address.city}, {site.address.province}</p>
+            </div>
+          </div>
+          <p class="text-slate-600 leading-relaxed">{site.owner.bio}</p>
+          <div class="mt-6 pt-6 border-t border-slate-200 flex flex-wrap gap-4">
+            <a href={`mailto:${site.email}`} class="inline-flex items-center gap-2 text-slate-600 hover:text-orange-500 text-sm font-medium transition-colors">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              {site.email}
+            </a>
+            <a href={site.phoneHref} class="inline-flex items-center gap-2 text-slate-600 hover:text-orange-500 text-sm font-medium transition-colors">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+              {site.phoneFormatted}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection headline="Want to Work Together?" subtext="Book a free 30-minute call with Arsh and find out exactly how KingAsh can help your business grow." />
+</BaseLayout>

@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import { site } from '../../data/site.ts';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": site.website },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${site.website}/blog` }
+  ]
+};
+
+const posts = [
+  {
+    slug: "5-reasons-your-local-business-needs-a-professional-website",
+    title: "5 Reasons Your Local Business Needs a Professional Website in 2025",
+    excerpt: "If your business doesn't have a professional website, you're losing customers to competitors who do — even if they're worse than you. Here's why it matters more than ever.",
+    date: "2025-03-10",
+    readTime: "5 min read",
+    category: "Website Design"
+  },
+  {
+    slug: "ai-phone-representative-guide",
+    title: "How AI Phone Representatives Are Helping Local Businesses Never Miss a Call",
+    excerpt: "Every missed call is a missed customer. Here's how local businesses — from salons to plumbers — are using AI phone reps to capture every lead automatically.",
+    date: "2025-03-24",
+    readTime: "7 min read",
+    category: "AI Automation"
+  },
+  {
+    slug: "meta-ads-for-local-businesses",
+    title: "The Complete Guide to Meta Ads for Local Businesses in 2025",
+    excerpt: "Meta Ads (Facebook & Instagram) can be the most cost-effective way to reach local customers — if you know how to use them. This guide breaks it down for business owners.",
+    date: "2025-04-07",
+    readTime: "9 min read",
+    category: "Paid Ads"
+  }
+];
+---
+
+<BaseLayout
+  title="Marketing Blog for Local Businesses | KingAsh"
+  description="Tips, guides, and strategies to help local brick-and-mortar businesses grow online. Covering websites, AI automation, Meta ads, and SEO."
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="hero-bg relative overflow-hidden py-24 lg:py-28">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <nav aria-label="Breadcrumb" class="mb-8 flex justify-center">
+        <ol class="flex items-center gap-2 text-sm text-slate-500">
+          <li><a href="/" class="hover:text-orange-400 transition-colors">Home</a></li>
+          <li class="text-slate-700">/</li>
+          <li class="text-slate-300">Blog</li>
+        </ol>
+      </nav>
+      <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">The KingAsh Blog</span>
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mt-3 mb-5">
+        Grow Smarter. <span class="gradient-text">Market Better.</span>
+      </h1>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        No fluff, no theory. Just practical marketing advice written for local business owners who want more customers.
+      </p>
+    </div>
+  </section>
+
+  <!-- Posts -->
+  <section class="bg-white py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-7">
+        {posts.map((post, i) => (
+          <article class={`group border border-slate-200 rounded-2xl overflow-hidden hover:border-orange-200 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300 reveal reveal-delay-${i + 1}`}>
+            <!-- Color block header -->
+            <div class="h-3 bg-gradient-to-r from-orange-500 to-orange-400"></div>
+            <div class="p-7">
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-xs font-semibold text-orange-500 bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">
+                  {post.category}
+                </span>
+                <span class="text-xs text-slate-400">{post.readTime}</span>
+              </div>
+              <h2 class="font-display font-bold text-xl text-slate-900 group-hover:text-orange-500 transition-colors mb-3 leading-snug">
+                <a href={`/blog/${post.slug}`}>{post.title}</a>
+              </h2>
+              <p class="text-slate-500 text-sm leading-relaxed mb-5">{post.excerpt}</p>
+              <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+                <time class="text-xs text-slate-400" datetime={post.date}>
+                  {new Date(post.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
+                </time>
+                <a
+                  href={`/blog/${post.slug}`}
+                  class="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 text-sm font-semibold transition-colors"
+                  aria-label={`Read ${post.title}`}
+                >
+                  Read More
+                  <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline="Ready to Put These Ideas Into Action?"
+    subtext="Learning is great, but results come from execution. Let KingAsh handle the marketing so you can focus on running your business."
+  />
+</BaseLayout>

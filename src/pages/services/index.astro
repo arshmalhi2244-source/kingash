@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CTASection from '../../components/CTASection.astro';
+import { site } from '../../data/site.ts';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": site.website },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": `${site.website}/services` }
+  ]
+};
+---
+
+<BaseLayout
+  title="Marketing Services for Local Businesses | KingAsh"
+  description="Website design, AI phone representatives, Meta ads, and local SEO for brick-and-mortar businesses in Surrey, BC and across Canada. Starting at $100."
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="hero-bg relative overflow-hidden py-24 lg:py-28">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-1/2 right-1/3 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-slate-500">
+          <li><a href="/" class="hover:text-orange-400 transition-colors">Home</a></li>
+          <li class="text-slate-700">/</li>
+          <li class="text-slate-300">Services</li>
+        </ol>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Our Services</span>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mt-3 mb-5">
+          Four Services. <span class="gradient-text">One Mission.</span>
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed">
+          Every service we offer is designed to do one thing: bring more paying customers to your local business. Pick one or combine them all for maximum impact.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="bg-white py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid sm:grid-cols-2 gap-6 mb-16">
+        {site.services.map((service, i) => (
+          <div class={`reveal reveal-delay-${i + 1}`}>
+            <ServiceCard
+              slug={service.slug}
+              name={service.name}
+              shortDesc={service.shortDesc}
+              price={service.price}
+              icon={service.icon}
+            />
+          </div>
+        ))}
+      </div>
+
+      <!-- Service Detail Cards -->
+      <div class="space-y-12">
+        {site.services.map((service, i) => (
+          <article class={`grid lg:grid-cols-2 gap-10 items-center py-10 border-t border-slate-100 reveal ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+            <!-- Visual -->
+            <div class={`${i % 2 === 1 ? 'lg:order-2' : ''}`}>
+              <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-10 flex items-center justify-center min-h-48 relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, orange 1px, transparent 0); background-size: 24px 24px;"></div>
+                <div class="relative text-orange-400 w-16 h-16" set:html={service.icon} />
+              </div>
+            </div>
+            <!-- Content -->
+            <div class={`${i % 2 === 1 ? 'lg:order-1' : ''}`}>
+              <span class="text-orange-500 font-semibold text-sm">{service.priceLabel}</span>
+              <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 mt-1 mb-4">{service.name}</h2>
+              <p class="text-slate-500 leading-relaxed mb-6">{service.fullDesc}</p>
+              <ul class="space-y-2 mb-6">
+                {service.benefits.slice(0, 4).map((b) => (
+                  <li class="flex items-start gap-2.5 text-sm text-slate-600">
+                    <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    {b}
+                  </li>
+                ))}
+              </ul>
+              <div class="flex gap-3">
+                <a
+                  href={`/services/${service.slug}`}
+                  class="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors"
+                >
+                  Learn More
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+                <a
+                  href="/contact"
+                  class="inline-flex items-center gap-2 border border-slate-300 hover:border-orange-300 text-slate-700 hover:text-orange-600 font-semibold text-sm px-6 py-3 rounded-xl transition-colors"
+                >
+                  Get a Quote
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline="Not Sure Where to Start?"
+    subtext="Book a free 30-minute strategy call and we'll tell you exactly which services will drive the most growth for your business."
+  />
+</BaseLayout>

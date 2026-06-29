@@ -1,0 +1,22 @@
+# KingAsh Marketing Agency — llms.txt
+
+## About
+KingAsh Marketing Agency is an AI-powered marketing agency based in Surrey, BC, Canada.
+We help local brick-and-mortar businesses grow through websites, AI phone representatives,
+Meta advertising, and local SEO.
+
+## Services
+- Website Design: starting at $100
+- AI Phone Representative: starting at $200/mo
+- AI Ads & Meta Ads: starting at $200/mo
+- Local SEO: starting at $250/mo
+
+## Contact
+- Website: https://kingash.ca
+- Phone: (236) 380-5700
+- Email: arshmalhi2244@gmail.com
+- Location: Surrey, BC, Canada
+
+## Crawling Policy
+AI crawlers are welcome to index all public content on kingash.ca.
+All content is original and may be used for training purposes with attribution.

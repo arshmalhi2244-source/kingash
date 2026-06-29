@@ -1,0 +1,185 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import CTASection from '../../components/CTASection.astro';
+import { site } from '../../data/site.ts';
+
+export function getStaticPaths() {
+  return site.areas.map((area) => ({
+    params: { area: area.slug },
+    props: { area },
+  }));
+}
+
+const { area } = Astro.props;
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": site.name,
+    "description": `${site.name} provides website design, AI phone representatives, Meta ads, and local SEO for businesses in ${area.name}, ${area.province}.`,
+    "url": `${site.website}/areas/${area.slug}`,
+    "telephone": `+1${site.phone}`,
+    "email": site.email,
+    "areaServed": {
+      "@type": "City",
+      "name": area.name,
+      "containedInPlace": { "@type": "State", "name": area.province }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": site.website },
+      { "@type": "ListItem", "position": 2, "name": "Areas", "item": `${site.website}/areas` },
+      { "@type": "ListItem", "position": 3, "name": area.name, "item": `${site.website}/areas/${area.slug}` }
+    ]
+  }
+];
+---
+
+<BaseLayout
+  title={`Marketing Agency in ${area.name}, ${area.province} | KingAsh`}
+  description={`KingAsh helps local businesses in ${area.name}, ${area.province} grow online. Websites from $100, AI phone reps, Meta ads, and local SEO. Get your free growth plan.`}
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="hero-bg relative overflow-hidden py-24 lg:py-28">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute top-1/2 right-1/3 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex items-center gap-2 text-sm text-slate-500">
+          <li><a href="/" class="hover:text-orange-400 transition-colors">Home</a></li>
+          <li class="text-slate-700">/</li>
+          <li><a href="/services" class="hover:text-orange-400 transition-colors">Services</a></li>
+          <li class="text-slate-700">/</li>
+          <li class="text-slate-300">{area.name}</li>
+        </ol>
+      </nav>
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-semibold px-4 py-2 rounded-full mb-6 uppercase tracking-wider">
+          <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+          </svg>
+          Serving {area.name}, {area.province}
+        </div>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mt-2 mb-5">
+          Local Marketing Agency in <span class="gradient-text">{area.name}</span>
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">
+          KingAsh helps {area.name}'s brick-and-mortar businesses outrank competitors, automate customer communication, and grow revenue — with AI-powered systems that actually work.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg shadow-orange-500/30"
+          >
+            Get a Free Growth Plan for Your {area.name} Business
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Local Matters -->
+  <section class="bg-white py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Why {area.name} Businesses Choose KingAsh</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-2 mb-6">
+            We Know What Works in Your Market
+          </h2>
+          <p class="text-slate-500 leading-relaxed mb-5">
+            Generic marketing doesn't work for local businesses. What drives customers in {area.name}, {area.province} is different from what works in other markets — and we build our strategies around that reality.
+          </p>
+          <p class="text-slate-500 leading-relaxed mb-6">
+            From optimizing your Google Business Profile for {area.name} searches, to running Meta ads that target customers within a 10km radius, every tactic we use is calibrated for your specific market.
+          </p>
+          <ul class="space-y-3">
+            {[
+              `Local SEO targeting "${area.name}" keywords`,
+              `Meta ads geotargeted to ${area.name} and surrounding areas`,
+              "Google Business Profile optimization for map pack rankings",
+              "AI phone rep for 24/7 customer handling"
+            ].map((point) => (
+              <li class="flex items-start gap-2.5 text-sm text-slate-600">
+                <svg class="w-4 h-4 text-orange-500 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="grid grid-cols-2 gap-4 reveal reveal-delay-2">
+          {[
+            { value: "150+", label: "Canadian businesses helped" },
+            { value: "47%", label: "Average traffic increase" },
+            { value: "4.9★", label: "Client satisfaction" },
+            { value: "$100", label: "Starting price" }
+          ].map((stat) => (
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-center">
+              <p class="font-display font-bold text-3xl text-orange-500 mb-1">{stat.value}</p>
+              <p class="text-slate-500 text-xs">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services for This Area -->
+  <section class="bg-slate-50 py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14 reveal">
+        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Our Services in {area.name}</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-2 mb-4">
+          Everything Your {area.name} Business Needs
+        </h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {site.services.map((service, i) => (
+          <div class={`reveal reveal-delay-${i + 1}`}>
+            <ServiceCard
+              slug={service.slug}
+              name={service.name}
+              shortDesc={service.shortDesc}
+              price={service.price}
+              icon={service.icon}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Locations -->
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display font-bold text-xl text-slate-900 mb-6">Also Serving</h2>
+      <div class="flex flex-wrap gap-3">
+        {site.areas
+          .filter((a) => a.slug !== area.slug)
+          .map((a) => (
+            <a
+              href={`/areas/${a.slug}`}
+              class="text-sm text-slate-600 hover:text-orange-500 bg-slate-50 hover:bg-orange-50 border border-slate-200 hover:border-orange-200 px-4 py-2 rounded-lg transition-colors"
+            >
+              {a.name}, {a.province}
+            </a>
+          ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline={`Grow Your ${area.name} Business Today`}
+    subtext={`Join local businesses in ${area.name} and across Canada that trust KingAsh with their digital growth. Get your free plan — no commitment.`}
+  />
+</BaseLayout>
