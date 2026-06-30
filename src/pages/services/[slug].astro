@@ -60,20 +60,20 @@ const schema = [
   <!-- Hero -->
   <section class="hero-bg relative overflow-hidden py-24 lg:py-28">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-      <div class="absolute top-1/2 right-1/3 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 right-1/3 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl"></div>
     </div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <nav aria-label="Breadcrumb" class="mb-8">
         <ol class="flex items-center gap-2 text-sm text-slate-500">
-          <li><a href="/" class="hover:text-orange-400 transition-colors">Home</a></li>
+          <li><a href="/" class="hover:text-gold-400 transition-colors">Home</a></li>
           <li class="text-slate-700">/</li>
-          <li><a href="/services" class="hover:text-orange-400 transition-colors">Services</a></li>
+          <li><a href="/services" class="hover:text-gold-400 transition-colors">Services</a></li>
           <li class="text-slate-700">/</li>
           <li class="text-slate-300">{service.name}</li>
         </ol>
       </nav>
       <div class="max-w-3xl">
-        <span class="text-orange-500 font-semibold text-sm">{service.priceLabel}</span>
+        <span class="text-gold-500 font-semibold text-sm">{service.priceLabel}</span>
         <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mt-2 mb-5">
           {service.name}
         </h1>
@@ -81,7 +81,7 @@ const schema = [
         <div class="flex flex-col sm:flex-row gap-4">
           <a
             href="/contact"
-            class="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg shadow-orange-500/30"
+            class="inline-flex items-center justify-center gap-2 bg-gold-500 hover:bg-gold-600 text-navy-950 font-semibold px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold-500/30"
           >
             Get a Free Quote
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
@@ -100,23 +100,23 @@ const schema = [
   </section>
 
   <!-- Benefits -->
-  <section class="bg-white py-20 lg:py-28">
+  <section class="bg-navy-950 py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 items-start">
         <div class="reveal">
-          <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">What You Get</span>
-          <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-2 mb-8">
+          <span class="text-gold-500 font-semibold text-sm uppercase tracking-wider">What You Get</span>
+          <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2 mb-8">
             Everything Included in {service.name}
           </h2>
           <ul class="space-y-4">
             {service.benefits.map((benefit) => (
               <li class="flex items-start gap-4">
-                <div class="w-8 h-8 bg-orange-50 border border-orange-100 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
-                  <svg class="w-4 h-4 text-orange-500" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <div class="w-8 h-8 bg-gold-500/10 border border-gold-500/20 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-4 h-4 text-gold-400" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                 </div>
-                <p class="text-slate-600 leading-relaxed">{benefit}</p>
+                <p class="text-slate-300 leading-relaxed">{benefit}</p>
               </li>
             ))}
           </ul>
@@ -124,8 +124,8 @@ const schema = [
 
         <!-- Pricing Card -->
         <div class="reveal reveal-delay-2">
-          <div class="bg-slate-950 border border-orange-500/30 rounded-2xl p-8 sticky top-24">
-            <div class="text-orange-500 font-semibold text-sm mb-3">Pricing</div>
+          <div class="bg-navy-950 border border-gold-500/30 rounded-2xl p-8 sticky top-24">
+            <div class="text-gold-500 font-semibold text-sm mb-3">Pricing</div>
             <div class="flex items-end gap-2 mb-2">
               <span class="font-display font-bold text-5xl text-white">{service.price}</span>
               <span class="text-slate-400 text-sm mb-2">starting price</span>
@@ -133,7 +133,7 @@ const schema = [
             <p class="text-slate-400 text-sm mb-6">Final price depends on your specific needs. Get a custom quote — no obligation.</p>
             <a
               href="/contact"
-              class="w-full block text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 rounded-xl transition-colors mb-4 shadow-lg shadow-orange-500/20"
+              class="w-full block text-center bg-gold-500 hover:bg-gold-600 text-navy-950 font-semibold py-4 rounded-xl transition-colors mb-4 shadow-lg shadow-gold-500/20"
             >
               Get a Custom Quote
             </a>
@@ -146,7 +146,7 @@ const schema = [
             <div class="mt-6 pt-6 border-t border-white/10 space-y-2">
               {["Month-to-month, cancel anytime", "Response within 1 business day", "No hidden fees or surprises"].map((point) => (
                 <div class="flex items-center gap-2 text-slate-400 text-xs">
-                  <svg class="w-3.5 h-3.5 text-orange-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <svg class="w-3.5 h-3.5 text-gold-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                   </svg>
                   {point}
@@ -160,22 +160,22 @@ const schema = [
   </section>
 
   <!-- Process -->
-  <section class="bg-slate-50 py-20 lg:py-28">
+  <section class="bg-navy-900 py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14 reveal">
-        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">The Process</span>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-2 mb-4">
+        <span class="text-gold-500 font-semibold text-sm uppercase tracking-wider">The Process</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2 mb-4">
           How {service.name} Works
         </h2>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
         {service.process.map((step, i) => (
           <div class={`text-center reveal reveal-delay-${i + 1}`}>
-            <div class="inline-flex items-center justify-center w-14 h-14 bg-orange-500 text-white font-display font-bold text-lg rounded-2xl mb-5 shadow-lg shadow-orange-500/30">
+            <div class="inline-flex items-center justify-center w-14 h-14 bg-gold-500 text-navy-950 font-display font-bold text-lg rounded-2xl mb-5 shadow-lg shadow-gold-500/30">
               {String(step.step).padStart(2, '0')}
             </div>
-            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">{step.title}</h3>
-            <p class="text-slate-500 text-sm leading-relaxed">{step.desc}</p>
+            <h3 class="font-display font-bold text-xl text-white mb-3">{step.title}</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
           </div>
         ))}
       </div>
@@ -183,15 +183,15 @@ const schema = [
   </section>
 
   <!-- FAQ -->
-  <section class="bg-white py-20 lg:py-28">
+  <section class="bg-navy-950 py-20 lg:py-28">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 reveal">
-        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">FAQ</span>
-        <h2 class="font-display font-bold text-3xl text-slate-900 mt-2 mb-4">
+        <span class="text-gold-500 font-semibold text-sm uppercase tracking-wider">FAQ</span>
+        <h2 class="font-display font-bold text-3xl text-white mt-2 mb-4">
           Common Questions About {service.name}
         </h2>
       </div>
-      <div class="divide-y divide-slate-200 border border-slate-200 rounded-2xl px-6 reveal">
+      <div class="divide-y divide-white/10 border border-white/10 rounded-2xl px-6 reveal">
         {service.faqs.map((faq) => (
           <FAQAccordion question={faq.q} answer={faq.a} />
         ))}
@@ -200,22 +200,22 @@ const schema = [
   </section>
 
   <!-- Other Services -->
-  <section class="bg-slate-50 py-16 lg:py-20">
+  <section class="bg-navy-900 py-16 lg:py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-display font-bold text-2xl text-slate-900 mb-8 text-center">Explore Other Services</h2>
+      <h2 class="font-display font-bold text-2xl text-white mb-8 text-center">Explore Other Services</h2>
       <div class="grid sm:grid-cols-3 gap-4">
         {site.services
           .filter((s) => s.slug !== service.slug)
           .map((s) => (
             <a
               href={`/services/${s.slug}`}
-              class="bg-white border border-slate-200 hover:border-orange-200 rounded-xl p-5 flex items-center gap-4 transition-colors group"
+              class="bg-navy-900 border border-white/10 hover:border-gold-500/30 rounded-xl p-5 flex items-center gap-4 transition-colors group"
             >
-              <div class="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-colors shrink-0">
+              <div class="w-10 h-10 bg-gold-500/10 rounded-lg flex items-center justify-center text-gold-400 group-hover:bg-gold-500 group-hover:text-navy-950 transition-colors shrink-0">
                 <div class="w-5 h-5" set:html={s.icon} />
               </div>
               <div>
-                <p class="font-semibold text-slate-900 text-sm group-hover:text-orange-500 transition-colors">{s.name}</p>
+                <p class="font-semibold text-white text-sm group-hover:text-gold-400 transition-colors">{s.name}</p>
                 <p class="text-slate-400 text-xs">{s.priceLabel}</p>
               </div>
             </a>

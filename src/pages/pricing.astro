@@ -41,17 +41,17 @@ const pricingFaqs = [
   <!-- Page Hero -->
   <section class="hero-bg relative overflow-hidden py-24 lg:py-28">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-      <div class="absolute top-1/2 right-1/4 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/2 right-1/4 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl"></div>
     </div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <nav aria-label="Breadcrumb" class="mb-8 flex justify-center">
         <ol class="flex items-center gap-2 text-sm text-slate-500">
-          <li><a href="/" class="hover:text-orange-400 transition-colors">Home</a></li>
+          <li><a href="/" class="hover:text-gold-400 transition-colors">Home</a></li>
           <li class="text-slate-700">/</li>
           <li class="text-slate-300">Pricing</li>
         </ol>
       </nav>
-      <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Transparent Pricing</span>
+      <span class="text-gold-500 font-semibold text-sm uppercase tracking-wider">Transparent Pricing</span>
       <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mt-3 mb-5">
         Simple Plans. <span class="gradient-text">Real Results.</span>
       </h1>
@@ -62,7 +62,7 @@ const pricingFaqs = [
   </section>
 
   <!-- Pricing Cards -->
-  <section class="bg-slate-50 py-20 lg:py-28">
+  <section class="bg-navy-900 py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
         {site.pricing.map((plan, i) => (
@@ -84,26 +84,26 @@ const pricingFaqs = [
       <!-- Note -->
       <p class="text-center text-slate-400 text-sm mt-10 reveal">
         All plans are month-to-month. Ad spend (for Meta Ads) is billed separately and paid directly to Meta.
-        <a href="/contact" class="text-orange-500 hover:underline ml-1">Questions? Chat with us.</a>
+        <a href="/contact" class="text-gold-500 hover:underline ml-1">Questions? Chat with us.</a>
       </p>
     </div>
   </section>
 
   <!-- Feature Comparison -->
-  <section class="bg-white py-20 lg:py-28">
+  <section class="bg-navy-950 py-20 lg:py-28">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 reveal">
-        <h2 class="font-display font-bold text-3xl text-slate-900 mb-3">Compare All Features</h2>
-        <p class="text-slate-500">Every plan includes what you need to compete locally.</p>
+        <h2 class="font-display font-bold text-3xl text-white mb-3">Compare All Features</h2>
+        <p class="text-slate-400">Every plan includes what you need to compete locally.</p>
       </div>
       <div class="overflow-x-auto reveal">
         <table class="w-full text-sm border-collapse">
           <thead>
-            <tr class="border-b border-slate-200">
-              <th class="text-left py-4 pr-6 text-slate-600 font-semibold w-1/2">Feature</th>
-              <th class="py-4 px-4 text-center text-slate-600 font-semibold">Starter</th>
-              <th class="py-4 px-4 text-center text-orange-500 font-bold">Growth</th>
-              <th class="py-4 px-4 text-center text-slate-600 font-semibold">Elite</th>
+            <tr class="border-b border-white/10">
+              <th class="text-left py-4 pr-6 text-slate-300 font-semibold w-1/2">Feature</th>
+              <th class="py-4 px-4 text-center text-slate-300 font-semibold">Starter</th>
+              <th class="py-4 px-4 text-center text-gold-500 font-bold">Growth</th>
+              <th class="py-4 px-4 text-center text-slate-300 font-semibold">Elite</th>
             </tr>
           </thead>
           <tbody>
@@ -121,16 +121,16 @@ const pricingFaqs = [
               ["Dedicated Account Manager", false, false, true],
               ["24/7 Priority Support", false, false, true],
             ].map(([feature, starter, growth, elite]) => (
-              <tr class="border-b border-slate-100 hover:bg-slate-50">
-                <td class="py-3.5 pr-6 text-slate-700">{feature}</td>
+              <tr class="border-b border-white/10 hover:bg-white/5">
+                <td class="py-3.5 pr-6 text-slate-300">{feature}</td>
                 {[starter, growth, elite].map((has, j) => (
-                  <td class={`py-3.5 px-4 text-center ${j === 1 ? 'bg-orange-50' : ''}`}>
+                  <td class={`py-3.5 px-4 text-center ${j === 1 ? 'bg-gold-500/10' : ''}`}>
                     {has ? (
-                      <svg class="w-5 h-5 text-orange-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                      <svg class="w-5 h-5 text-gold-500 mx-auto" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                       </svg>
                     ) : (
-                      <svg class="w-5 h-5 text-slate-300 mx-auto" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                      <svg class="w-5 h-5 text-slate-600 mx-auto" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     )}
@@ -145,13 +145,13 @@ const pricingFaqs = [
   </section>
 
   <!-- Pricing FAQ -->
-  <section class="bg-slate-50 py-20 lg:py-28">
+  <section class="bg-navy-900 py-20 lg:py-28">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12 reveal">
-        <h2 class="font-display font-bold text-3xl text-slate-900 mb-3">Pricing Questions</h2>
-        <p class="text-slate-500">Clear answers on billing, plans, and what's included.</p>
+        <h2 class="font-display font-bold text-3xl text-white mb-3">Pricing Questions</h2>
+        <p class="text-slate-400">Clear answers on billing, plans, and what's included.</p>
       </div>
-      <div class="divide-y divide-slate-200 border border-slate-200 rounded-2xl px-6 reveal">
+      <div class="divide-y divide-white/10 border border-white/10 rounded-2xl px-6 reveal">
         {pricingFaqs.map((faq) => (
           <FAQAccordion question={faq.q} answer={faq.a} />
         ))}

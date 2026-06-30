@@ -98,14 +98,14 @@ const whyUs = [
   <StatsBar />
 
   <!-- Services -->
-  <section class="bg-slate-50 py-20 lg:py-28">
+  <section class="bg-navy-900 py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14 reveal">
-        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">What We Do</span>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-2 mb-4">
+        <span class="text-gold-400 font-semibold text-sm uppercase tracking-wider">What We Do</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2 mb-4">
           Everything Your Business Needs to Win Online
         </h2>
-        <p class="text-slate-500 max-w-2xl mx-auto">
+        <p class="text-slate-400 max-w-2xl mx-auto">
           Four proven services. One agency. Zero fluff. Every service is designed to bring more customers through your door.
         </p>
       </div>
@@ -126,27 +126,27 @@ const whyUs = [
   </section>
 
   <!-- How It Works -->
-  <section class="bg-white py-20 lg:py-28">
+  <section class="bg-navy-950 py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14 reveal">
-        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">The Process</span>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-2 mb-4">
+        <span class="text-gold-400 font-semibold text-sm uppercase tracking-wider">The Process</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2 mb-4">
           From First Call to First Results
         </h2>
-        <p class="text-slate-500 max-w-xl mx-auto">
+        <p class="text-slate-400 max-w-xl mx-auto">
           Getting started is easier than you think. Three steps and you're growing.
         </p>
       </div>
       <div class="grid md:grid-cols-3 gap-8 relative">
         <!-- Connector line -->
-        <div class="hidden md:block absolute top-12 left-[16.66%] right-[16.66%] h-px bg-gradient-to-r from-orange-200 via-orange-400 to-orange-200" aria-hidden="true"></div>
+        <div class="hidden md:block absolute top-12 left-[16.66%] right-[16.66%] h-px bg-gradient-to-r from-gold-500/10 via-gold-400/60 to-gold-500/10" aria-hidden="true"></div>
         {howItWorks.map((step, i) => (
           <div class={`relative text-center reveal reveal-delay-${i + 1}`}>
-            <div class="inline-flex items-center justify-center w-16 h-16 bg-orange-500 text-white font-display font-bold text-xl rounded-2xl mb-5 mx-auto shadow-lg shadow-orange-500/30">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-gold-500 text-navy-950 font-display font-bold text-xl rounded-2xl mb-5 mx-auto shadow-lg shadow-gold-500/30">
               {step.step}
             </div>
-            <h3 class="font-display font-bold text-xl text-slate-900 mb-3">{step.title}</h3>
-            <p class="text-slate-500 text-sm leading-relaxed">{step.desc}</p>
+            <h3 class="font-display font-bold text-xl text-white mb-3">{step.title}</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">{step.desc}</p>
           </div>
         ))}
       </div>
@@ -154,10 +154,10 @@ const whyUs = [
   </section>
 
   <!-- Why Us -->
-  <section class="bg-slate-950 py-20 lg:py-28">
+  <section class="bg-navy-900 py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14 reveal">
-        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Why KingAsh</span>
+        <span class="text-gold-500 font-semibold text-sm uppercase tracking-wider">Why KingAsh</span>
         <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2 mb-4">
           We're Different. Here's How.
         </h2>
@@ -167,8 +167,8 @@ const whyUs = [
       </div>
       <div class="grid sm:grid-cols-2 gap-6">
         {whyUs.map((item, i) => (
-          <div class={`flex gap-5 bg-white/5 border border-white/[0.08] rounded-2xl p-7 hover:border-orange-500/30 transition-colors reveal reveal-delay-${i + 1}`}>
-            <div class="w-12 h-12 bg-orange-500/10 border border-orange-500/20 rounded-xl flex items-center justify-center text-orange-400 shrink-0">
+          <div class={`flex gap-5 bg-white/5 border border-white/[0.08] rounded-2xl p-7 hover:border-gold-500/30 transition-colors reveal reveal-delay-${i + 1}`}>
+            <div class="w-12 h-12 bg-gold-500/10 border border-gold-500/20 rounded-xl flex items-center justify-center text-gold-400 shrink-0">
               <div class="w-6 h-6" set:html={item.icon} />
             </div>
             <div>
@@ -182,14 +182,14 @@ const whyUs = [
   </section>
 
   <!-- Testimonials -->
-  <section class="bg-slate-50 py-20 lg:py-28">
+  <section class="bg-navy-950 py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14 reveal">
-        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">Client Stories</span>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-2 mb-4">
+        <span class="text-gold-400 font-semibold text-sm uppercase tracking-wider">Client Stories</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2 mb-4">
           Real Businesses. Real Results.
         </h2>
-        <p class="text-slate-500 max-w-xl mx-auto">
+        <p class="text-slate-400 max-w-xl mx-auto">
           Don't take our word for it. Here's what local business owners say after working with KingAsh.
         </p>
       </div>
@@ -210,15 +210,15 @@ const whyUs = [
   </section>
 
   <!-- FAQ -->
-  <section class="bg-white py-20 lg:py-28">
+  <section class="bg-navy-900 py-20 lg:py-28">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-14 reveal">
-        <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">FAQ</span>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 mt-2 mb-4">
+        <span class="text-gold-400 font-semibold text-sm uppercase tracking-wider">FAQ</span>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-white mt-2 mb-4">
           Got Questions? We've Got Answers.
         </h2>
       </div>
-      <div class="divide-y divide-slate-200 border border-slate-200 rounded-2xl px-6 reveal">
+      <div class="divide-y divide-white/10 border border-white/10 rounded-2xl px-6 reveal">
         {site.faqs.map((faq) => (
           <FAQAccordion question={faq.q} answer={faq.a} />
         ))}

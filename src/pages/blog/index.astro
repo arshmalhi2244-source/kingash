@@ -48,17 +48,17 @@ const posts = [
   <!-- Hero -->
   <section class="hero-bg relative overflow-hidden py-24 lg:py-28">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-      <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl"></div>
+      <div class="absolute top-1/3 right-1/4 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl"></div>
     </div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <nav aria-label="Breadcrumb" class="mb-8 flex justify-center">
         <ol class="flex items-center gap-2 text-sm text-slate-500">
-          <li><a href="/" class="hover:text-orange-400 transition-colors">Home</a></li>
+          <li><a href="/" class="hover:text-gold-400 transition-colors">Home</a></li>
           <li class="text-slate-700">/</li>
           <li class="text-slate-300">Blog</li>
         </ol>
       </nav>
-      <span class="text-orange-500 font-semibold text-sm uppercase tracking-wider">The KingAsh Blog</span>
+      <span class="text-gold-500 font-semibold text-sm uppercase tracking-wider">The KingAsh Blog</span>
       <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mt-3 mb-5">
         Grow Smarter. <span class="gradient-text">Market Better.</span>
       </h1>
@@ -69,31 +69,31 @@ const posts = [
   </section>
 
   <!-- Posts -->
-  <section class="bg-white py-20 lg:py-28">
+  <section class="bg-navy-950 py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-7">
         {posts.map((post, i) => (
-          <article class={`group border border-slate-200 rounded-2xl overflow-hidden hover:border-orange-200 hover:shadow-lg hover:shadow-orange-500/5 transition-all duration-300 reveal reveal-delay-${i + 1}`}>
+          <article class={`group bg-navy-900 border border-white/10 rounded-2xl overflow-hidden hover:border-gold-500/30 hover:shadow-lg hover:shadow-gold-500/5 transition-all duration-300 reveal reveal-delay-${i + 1}`}>
             <!-- Color block header -->
-            <div class="h-3 bg-gradient-to-r from-orange-500 to-orange-400"></div>
+            <div class="h-3 bg-gradient-to-r from-gold-500 to-gold-400"></div>
             <div class="p-7">
               <div class="flex items-center gap-3 mb-4">
-                <span class="text-xs font-semibold text-orange-500 bg-orange-50 border border-orange-100 px-3 py-1 rounded-full">
+                <span class="text-xs font-semibold text-gold-400 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">
                   {post.category}
                 </span>
                 <span class="text-xs text-slate-400">{post.readTime}</span>
               </div>
-              <h2 class="font-display font-bold text-xl text-slate-900 group-hover:text-orange-500 transition-colors mb-3 leading-snug">
+              <h2 class="font-display font-bold text-xl text-white group-hover:text-gold-400 transition-colors mb-3 leading-snug">
                 <a href={`/blog/${post.slug}`}>{post.title}</a>
               </h2>
-              <p class="text-slate-500 text-sm leading-relaxed mb-5">{post.excerpt}</p>
-              <div class="flex items-center justify-between pt-4 border-t border-slate-100">
+              <p class="text-slate-400 text-sm leading-relaxed mb-5">{post.excerpt}</p>
+              <div class="flex items-center justify-between pt-4 border-t border-white/10">
                 <time class="text-xs text-slate-400" datetime={post.date}>
                   {new Date(post.date).toLocaleDateString('en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}
                 </time>
                 <a
                   href={`/blog/${post.slug}`}
-                  class="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 text-sm font-semibold transition-colors"
+                  class="inline-flex items-center gap-1 text-gold-400 hover:text-gold-300 text-sm font-semibold transition-colors"
                   aria-label={`Read ${post.title}`}
                 >
                   Read More

@@ -36,15 +36,15 @@ const schema = [
       <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav aria-label="Breadcrumb" class="mb-8">
           <ol class="flex items-center gap-2 text-sm text-slate-500">
-            <li><a href="/" class="hover:text-orange-400 transition-colors">Home</a></li>
+            <li><a href="/" class="hover:text-gold-400 transition-colors">Home</a></li>
             <li class="text-slate-700">/</li>
-            <li><a href="/blog" class="hover:text-orange-400 transition-colors">Blog</a></li>
+            <li><a href="/blog" class="hover:text-gold-400 transition-colors">Blog</a></li>
             <li class="text-slate-700">/</li>
             <li class="text-slate-300 truncate">AI Phone Guide</li>
           </ol>
         </nav>
         <div class="flex items-center gap-3 mb-5">
-          <span class="text-xs font-semibold text-orange-500 bg-orange-500/10 border border-orange-500/20 px-3 py-1 rounded-full">AI Automation</span>
+          <span class="text-xs font-semibold text-gold-500 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">AI Automation</span>
           <span class="text-slate-500 text-sm">7 min read</span>
           <span class="text-slate-600 text-sm">March 24, 2025</span>
         </div>
@@ -55,7 +55,7 @@ const schema = [
           Every missed call is a missed customer. Here's how local businesses across Canada are using AI phone representatives to capture every lead, book more appointments, and run smoother operations.
         </p>
         <div class="mt-6 flex items-center gap-3">
-          <div class="w-9 h-9 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm">AM</div>
+          <div class="w-9 h-9 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-sm">AM</div>
           <div>
             <p class="text-white text-sm font-medium">{site.owner.name}</p>
             <p class="text-slate-500 text-xs">{site.owner.title}, {site.name}</p>
@@ -64,15 +64,15 @@ const schema = [
       </div>
     </section>
 
-    <section class="bg-white py-16 lg:py-20">
+    <section class="bg-navy-950 py-16 lg:py-20">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="space-y-6 text-slate-600 leading-relaxed">
-          <p class="text-xl text-slate-700 leading-relaxed">
+        <div class="space-y-6 text-slate-400 leading-relaxed">
+          <p class="text-xl text-slate-300 leading-relaxed">
             A hair salon in Burnaby was missing 40% of its calls after 6pm. A plumbing company in Surrey was losing weekend emergency jobs to a competitor who happened to answer. A dental clinic was spending two hours per day managing routine booking calls.
           </p>
           <p>All three now use an AI Phone Representative. All three have seen measurable improvements in revenue.</p>
 
-          <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 mt-10 mb-4">What Is an AI Phone Representative?</h2>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">What Is an AI Phone Representative?</h2>
           <p>
             An AI Phone Representative is an intelligent voice system that answers your business calls automatically. Unlike traditional phone systems or voicemail, it actually has a conversation — it listens, understands, and responds to callers in natural language.
           </p>
@@ -86,7 +86,7 @@ const schema = [
           </ul>
           <p>And it does all of this 24 hours a day, 7 days a week, without ever taking a sick day.</p>
 
-          <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 mt-10 mb-4">Why Missed Calls Are Costing You More Than You Think</h2>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Why Missed Calls Are Costing You More Than You Think</h2>
           <p>
             Research consistently shows that 85% of people who can't reach a business on the first call will not call back — they'll go to a competitor. For a business that closes $300 in average revenue per client, missing just one call per day means losing over $100,000 in annual revenue.
           </p>
@@ -94,7 +94,7 @@ const schema = [
             Most local businesses miss calls for predictable reasons: they're with another customer, they're in the back, it's after hours, or the phone rings during the lunch rush. An AI Phone Rep eliminates every one of these scenarios.
           </p>
 
-          <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 mt-10 mb-4">Real Results from Real Businesses</h2>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Real Results from Real Businesses</h2>
           <p>Here's what we've seen from businesses using our AI Phone Representative service:</p>
 
           <div class="grid sm:grid-cols-3 gap-4 my-6">
@@ -103,14 +103,14 @@ const schema = [
               { stat: "2.4hrs", label: "Average admin time saved per day" },
               { stat: "91%", label: "After-hours calls handled without human" }
             ].map(item => (
-              <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 text-center">
-                <p class="font-display font-bold text-3xl text-orange-500 mb-1">{item.stat}</p>
-                <p class="text-slate-500 text-xs">{item.label}</p>
+              <div class="bg-navy-900 border border-white/10 rounded-xl p-5 text-center">
+                <p class="font-display font-bold text-3xl text-gold-500 mb-1">{item.stat}</p>
+                <p class="text-slate-400 text-xs">{item.label}</p>
               </div>
             ))}
           </div>
 
-          <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 mt-10 mb-4">Doesn't It Sound Robotic?</h2>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Doesn't It Sound Robotic?</h2>
           <p>
             This is the question we get most often. The honest answer is: modern AI voice technology has improved dramatically. Most callers cannot distinguish between an AI voice and a human receptionist — especially when the AI is trained properly on your business's specific tone, terminology, and frequently asked questions.
           </p>
@@ -118,7 +118,7 @@ const schema = [
             We train every AI Phone Rep on your business before going live. We test it extensively. And we set clear escalation rules so that complex conversations — angry customers, medical emergencies, unusual situations — get transferred to a real person immediately.
           </p>
 
-          <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 mt-10 mb-4">Who Should Use an AI Phone Representative?</h2>
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Who Should Use an AI Phone Representative?</h2>
           <p>This service is a fit for almost any local service business, but it's especially valuable for:</p>
           <ul class="list-disc pl-6 space-y-2">
             <li><strong>Salons and spas</strong> — high call volume for appointments</li>
@@ -128,32 +128,32 @@ const schema = [
             <li><strong>Fitness studios and gyms</strong> — membership inquiries and class bookings</li>
           </ul>
 
-          <div class="bg-orange-50 border border-orange-200 rounded-2xl p-6 my-8">
-            <h3 class="font-display font-bold text-xl text-slate-900 mb-2">The Simple Math</h3>
-            <p class="text-slate-700">
+          <div class="bg-gold-500/10 border border-gold-500/20 rounded-2xl p-6 my-8">
+            <h3 class="font-display font-bold text-xl text-white mb-2">The Simple Math</h3>
+            <p class="text-slate-300">
               If your AI Phone Rep captures just one extra booking per week that would have otherwise been a missed call, it pays for itself. For most businesses, it captures far more than that.
             </p>
           </div>
 
           <p>
-            Our AI Phone Representative service starts at $200/month. To learn more or get set up, <a href="/contact" class="text-orange-500 hover:text-orange-600 font-semibold underline">reach out to us here</a> or visit our <a href="/services/ai-phone-representative" class="text-orange-500 hover:text-orange-600 font-semibold underline">service page</a>.
+            Our AI Phone Representative service starts at $200/month. To learn more or get set up, <a href="/contact" class="text-gold-400 hover:text-gold-300 font-semibold underline">reach out to us here</a> or visit our <a href="/services/ai-phone-representative" class="text-gold-400 hover:text-gold-300 font-semibold underline">service page</a>.
           </p>
         </div>
       </div>
     </section>
   </article>
 
-  <section class="bg-slate-50 py-16">
+  <section class="bg-navy-900 py-16">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-display font-bold text-2xl text-slate-900 mb-6">Keep Reading</h2>
+      <h2 class="font-display font-bold text-2xl text-white mb-6">Keep Reading</h2>
       <div class="grid sm:grid-cols-2 gap-5">
-        <a href="/blog/5-reasons-your-local-business-needs-a-professional-website" class="bg-white border border-slate-200 hover:border-orange-200 rounded-xl p-5 transition-colors group">
-          <span class="text-xs text-orange-500 font-semibold">Website Design</span>
-          <h3 class="font-display font-semibold text-slate-900 group-hover:text-orange-500 transition-colors mt-1 leading-snug">5 Reasons Your Local Business Needs a Professional Website</h3>
+        <a href="/blog/5-reasons-your-local-business-needs-a-professional-website" class="bg-navy-900 border border-white/10 hover:border-gold-500/30 rounded-xl p-5 transition-colors group">
+          <span class="text-xs text-gold-400 font-semibold">Website Design</span>
+          <h3 class="font-display font-semibold text-white group-hover:text-gold-400 transition-colors mt-1 leading-snug">5 Reasons Your Local Business Needs a Professional Website</h3>
         </a>
-        <a href="/blog/meta-ads-for-local-businesses" class="bg-white border border-slate-200 hover:border-orange-200 rounded-xl p-5 transition-colors group">
-          <span class="text-xs text-orange-500 font-semibold">Paid Ads</span>
-          <h3 class="font-display font-semibold text-slate-900 group-hover:text-orange-500 transition-colors mt-1 leading-snug">The Complete Guide to Meta Ads for Local Businesses</h3>
+        <a href="/blog/meta-ads-for-local-businesses" class="bg-navy-900 border border-white/10 hover:border-gold-500/30 rounded-xl p-5 transition-colors group">
+          <span class="text-xs text-gold-400 font-semibold">Paid Ads</span>
+          <h3 class="font-display font-semibold text-white group-hover:text-gold-400 transition-colors mt-1 leading-snug">The Complete Guide to Meta Ads for Local Businesses</h3>
         </a>
       </div>
     </div>

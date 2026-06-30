@@ -9,24 +9,24 @@ interface Props {
 const { slug, name, shortDesc, price, icon } = Astro.props;
 ---
 
-<article class="bg-white border border-slate-200 rounded-2xl p-7 flex flex-col gap-5 card-hover cursor-default">
+<article class="bg-navy-900 border border-white/10 rounded-2xl p-7 flex flex-col gap-5 card-hover cursor-default">
   <!-- Icon -->
-  <div class="w-12 h-12 bg-orange-50 border border-orange-100 rounded-xl flex items-center justify-center text-orange-500 shrink-0">
+  <div class="w-12 h-12 bg-gold-500/10 border border-gold-500/20 rounded-xl flex items-center justify-center text-gold-400 shrink-0">
     <div class="w-6 h-6" set:html={icon} />
   </div>
 
   <!-- Content -->
   <div class="flex-1">
-    <h3 class="font-display font-semibold text-xl text-slate-900 mb-2">{name}</h3>
-    <p class="text-slate-500 text-sm leading-relaxed">{shortDesc}</p>
+    <h3 class="font-display font-semibold text-xl text-white mb-2">{name}</h3>
+    <p class="text-slate-400 text-sm leading-relaxed">{shortDesc}</p>
   </div>
 
   <!-- Footer -->
-  <div class="flex items-center justify-between pt-4 border-t border-slate-100">
-    <span class="text-orange-500 font-semibold text-sm">Starting at {price}</span>
+  <div class="flex items-center justify-between pt-4 border-t border-white/10">
+    <span class="text-gold-400 font-semibold text-sm">Starting at {price}</span>
     <a
       href={`/services/${slug}`}
-      class="inline-flex items-center gap-1.5 text-slate-700 hover:text-orange-500 text-sm font-medium transition-colors group"
+      class="inline-flex items-center gap-1.5 text-slate-300 hover:text-gold-400 text-sm font-medium transition-colors group"
       aria-label={`Learn more about ${name}`}
     >
       Learn more
