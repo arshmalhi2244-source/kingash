@@ -16,7 +16,7 @@ const schema = {
 
 <BaseLayout
   title="Marketing Services for Local Businesses | KingAsh"
-  description="Website design, AI phone representatives, Meta ads, and local SEO for brick-and-mortar businesses in Surrey, BC and across Canada. Starting at $100."
+  description="Website design, AI phone representatives, Meta ads, and local SEO for brick-and-mortar businesses in Surrey, BC and across Canada."
   schema={schema}
 >
   <!-- Hero -->
@@ -54,7 +54,6 @@ const schema = {
               slug={service.slug}
               name={service.name}
               shortDesc={service.shortDesc}
-              price={service.price}
               icon={service.icon}
             />
           </div>
@@ -74,8 +73,7 @@ const schema = {
             </div>
             <!-- Content -->
             <div class={`${i % 2 === 1 ? 'lg:order-1' : ''}`}>
-              <span class="text-gold-500 font-semibold text-sm">{service.priceLabel}</span>
-              <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-1 mb-4">{service.name}</h2>
+              <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mb-4">{service.name}</h2>
               <p class="text-slate-400 leading-relaxed mb-6">{service.fullDesc}</p>
               <ul class="space-y-2 mb-6">
                 {service.benefits.slice(0, 4).map((b) => (

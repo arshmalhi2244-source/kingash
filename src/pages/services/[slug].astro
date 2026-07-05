@@ -24,12 +24,7 @@ const schema = [
       "name": site.name,
       "url": site.website
     },
-    "areaServed": "Canada",
-    "offers": {
-      "@type": "Offer",
-      "price": service.price.replace('$', ''),
-      "priceCurrency": "CAD"
-    }
+    "areaServed": "Canada"
   },
   {
     "@context": "https://schema.org",
@@ -73,8 +68,7 @@ const schema = [
         </ol>
       </nav>
       <div class="max-w-3xl">
-        <span class="text-gold-500 font-semibold text-sm">{service.priceLabel}</span>
-        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mt-2 mb-5">
+        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-5">
           {service.name}
         </h1>
         <p class="text-slate-400 text-lg leading-relaxed mb-8">{service.fullDesc}</p>
@@ -122,15 +116,11 @@ const schema = [
           </ul>
         </div>
 
-        <!-- Pricing Card -->
+        <!-- Quote Card -->
         <div class="reveal reveal-delay-2">
           <div class="bg-navy-950 border border-gold-500/30 rounded-2xl p-8 sticky top-24">
-            <div class="text-gold-500 font-semibold text-sm mb-3">Pricing</div>
-            <div class="flex items-end gap-2 mb-2">
-              <span class="font-display font-bold text-5xl text-white">{service.price}</span>
-              <span class="text-slate-400 text-sm mb-2">starting price</span>
-            </div>
-            <p class="text-slate-400 text-sm mb-6">Final price depends on your specific needs. Get a custom quote — no obligation.</p>
+            <div class="text-gold-500 font-semibold text-sm mb-3">Get Started</div>
+            <p class="text-slate-400 text-sm mb-6">Every business is different. Get a custom quote tailored to your needs — no obligation.</p>
             <a
               href="/contact"
               class="w-full block text-center bg-gold-500 hover:bg-gold-600 text-navy-950 font-semibold py-4 rounded-xl transition-colors mb-4 shadow-lg shadow-gold-500/20"
@@ -216,7 +206,7 @@ const schema = [
               </div>
               <div>
                 <p class="font-semibold text-white text-sm group-hover:text-gold-400 transition-colors">{s.name}</p>
-                <p class="text-slate-400 text-xs">{s.priceLabel}</p>
+                <p class="text-slate-400 text-xs line-clamp-1">{s.shortDesc}</p>
               </div>
             </a>
           ))}

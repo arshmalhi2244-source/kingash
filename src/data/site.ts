@@ -33,8 +33,8 @@ export const site = {
     { label: "Contact", href: "/contact" },
   ],
   stats: [
-    { value: "150+", label: "Businesses Helped" },
-    { value: "$3.2M+", label: "Revenue Generated" },
+    { value: "$0", label: "Free Website Audit" },
+    { value: "100%", label: "Money-Back Guarantee" },
     { value: "47%", label: "Avg Traffic Increase" },
     { value: "4.9★", label: "Client Rating" },
   ],
@@ -45,8 +45,6 @@ export const site = {
       shortDesc: "Professional, high-converting websites that work 24/7 to bring you customers.",
       fullDesc:
         "Your website is your best salesperson — it works around the clock, never takes a sick day, and represents your business to thousands of potential customers. We build fast, beautiful, mobile-first websites specifically designed to convert visitors into paying customers.",
-      price: "$100",
-      priceLabel: "Starting at $100",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3" /></svg>`,
       benefits: [
         "Mobile-first design that looks perfect on every device",
@@ -68,7 +66,7 @@ export const site = {
       ],
       metaTitle: "Professional Website Design for Local Businesses | KingAsh",
       metaDescription:
-        "Get a high-converting, mobile-first website starting at $100. Built for local brick-and-mortar businesses in Surrey, BC and across Canada. Fast launch, real results.",
+        "Get a high-converting, mobile-first website built for local brick-and-mortar businesses in Surrey, BC and across Canada. Fast launch, real results.",
     },
     {
       slug: "ai-phone-representative",
@@ -76,8 +74,6 @@ export const site = {
       shortDesc: "A 24/7 AI agent that answers calls, books appointments, and handles inquiries automatically.",
       fullDesc:
         "Every missed call is a missed customer. Our AI Phone Representative answers every call, 24 hours a day, 7 days a week. It handles inquiries, books appointments, answers FAQs, and routes complex calls to you — all without you lifting a finger.",
-      price: "$200",
-      priceLabel: "Starting at $200/mo",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>`,
       benefits: [
         "Never miss a customer call — 24/7 coverage including holidays",
@@ -99,7 +95,7 @@ export const site = {
       ],
       metaTitle: "AI Phone Representative for Local Businesses | KingAsh",
       metaDescription:
-        "Never miss another customer call. Our AI Phone Rep answers 24/7, books appointments, and handles inquiries automatically. Starting at $200/mo. Surrey & all of Canada.",
+        "Never miss another customer call. Our AI Phone Rep answers 24/7, books appointments, and handles inquiries automatically. Surrey & all of Canada.",
     },
     {
       slug: "ai-ads-meta-ads",
@@ -107,8 +103,6 @@ export const site = {
       shortDesc: "Facebook and Instagram ads that find your ideal local customers with AI precision.",
       fullDesc:
         "Stop guessing who to show your ads to. Our AI-powered ad system analyzes your ideal customer profile and targets them with laser precision across Facebook and Instagram. We manage everything from creative to optimization to reporting.",
-      price: "$200",
-      priceLabel: "Starting at $200/mo",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>`,
       benefits: [
         "AI-optimized targeting to reach your ideal local customers",
@@ -130,7 +124,7 @@ export const site = {
       ],
       metaTitle: "Facebook & Instagram Ads for Local Businesses | KingAsh",
       metaDescription:
-        "AI-powered Meta ads that find your ideal local customers. Professional campaign management starting at $200/mo. Serving Surrey, BC and all of Canada.",
+        "AI-powered Meta ads that find your ideal local customers. Professional campaign management for local businesses. Serving Surrey, BC and all of Canada.",
     },
     {
       slug: "seo",
@@ -138,8 +132,6 @@ export const site = {
       shortDesc: "Rank #1 on Google when local customers search for your services.",
       fullDesc:
         "When someone in Surrey searches for your type of business, they should find you first — not your competitor. Our local SEO service gets you ranking at the top of Google through technical optimization, content strategy, and local authority building.",
-      price: "$250",
-      priceLabel: "Starting at $250/mo",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>`,
       benefits: [
         "Google Business Profile optimization for map pack visibility",
@@ -161,7 +153,7 @@ export const site = {
       ],
       metaTitle: "Local SEO Services for Surrey Businesses | KingAsh",
       metaDescription:
-        "Rank #1 on Google for your local keywords. Local SEO starting at $250/mo. Google Business Profile, citations, content, and links. Surrey, BC and all of Canada.",
+        "Rank #1 on Google for your local keywords. Local SEO with Google Business Profile, citations, content, and links. Surrey, BC and all of Canada.",
     },
   ],
   testimonials: [
