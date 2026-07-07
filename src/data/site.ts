@@ -3,7 +3,7 @@ export const site = {
   shortName: "KingAsh",
   tagline: "Outrank. Automate. Dominate.",
   description:
-    "AI-powered marketing that turns local brick-and-mortar businesses into local legends. Websites, AI phone reps, Meta ads, and SEO — all under one roof in Surrey, BC.",
+    "AI-powered marketing that turns local brick-and-mortar businesses into local legends. Websites, AI phone reps, Meta ads, and SEO — all under one roof in Vancouver, BC.",
   phone: "2363805700",
   phoneFormatted: "(236) 380-5700",
   phoneHref: "tel:+12363805700",
@@ -67,7 +67,7 @@ export const site = {
       ],
       metaTitle: "Professional Website Design for Local Businesses | KingAsh",
       metaDescription:
-        "Get a high-converting, mobile-first website built for local brick-and-mortar businesses in Surrey, BC and across Canada. Fast launch, real results.",
+        "Get a high-converting, mobile-first website built for local brick-and-mortar businesses in Vancouver, BC and across Canada. Fast launch, real results.",
     },
     {
       slug: "ai-phone-representative",
@@ -96,7 +96,7 @@ export const site = {
       ],
       metaTitle: "AI Phone Representative for Local Businesses | KingAsh",
       metaDescription:
-        "Never miss another customer call. Our AI Phone Rep answers 24/7, books appointments, and handles inquiries automatically. Surrey & all of Canada.",
+        "Never miss another customer call. Our AI Phone Rep answers 24/7, books appointments, and handles inquiries automatically. Vancouver & all of Canada.",
     },
     {
       slug: "ai-ads-meta-ads",
@@ -125,14 +125,14 @@ export const site = {
       ],
       metaTitle: "Facebook & Instagram Ads for Local Businesses | KingAsh",
       metaDescription:
-        "AI-powered Meta ads that find your ideal local customers. Professional campaign management for local businesses. Serving Surrey, BC and all of Canada.",
+        "AI-powered Meta ads that find your ideal local customers. Professional campaign management for local businesses. Serving Vancouver, BC and all of Canada.",
     },
     {
       slug: "seo",
       name: "Local SEO",
       shortDesc: "Rank #1 on Google when local customers search for your services.",
       fullDesc:
-        "When someone in Surrey searches for your type of business, they should find you first — not your competitor. Our local SEO service gets you ranking at the top of Google through technical optimization, content strategy, and local authority building.",
+        "When someone in Vancouver searches for your type of business, they should find you first — not your competitor. Our local SEO service gets you ranking at the top of Google through technical optimization, content strategy, and local authority building.",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>`,
       benefits: [
         "Google Business Profile optimization for map pack visibility",
@@ -152,9 +152,9 @@ export const site = {
         { q: "Do you guarantee first page rankings?", a: "No ethical agency can guarantee specific rankings. We guarantee consistent, documented effort and transparent reporting." },
         { q: "What if I already have a website?", a: "Great — we optimize your existing site. If it's severely outdated, we may recommend a rebuild alongside SEO." },
       ],
-      metaTitle: "Local SEO Services for Surrey Businesses | KingAsh",
+      metaTitle: "Local SEO Services for Vancouver Businesses | KingAsh",
       metaDescription:
-        "Rank #1 on Google for your local keywords. Local SEO with Google Business Profile, citations, content, and links. Surrey, BC and all of Canada.",
+        "Rank #1 on Google for your local keywords. Local SEO with Google Business Profile, citations, content, and links. Vancouver, BC and all of Canada.",
     },
   ],
   testimonials: [
@@ -162,7 +162,7 @@ export const site = {
       quote:
         "KingAsh built our website and set up our Meta ads — within 6 weeks we had more walk-in customers than we'd ever had. Arsh knows his stuff.",
       name: "Mike T.",
-      business: "Riverside Grill, Surrey BC",
+      business: "Riverside Grill, Vancouver BC",
       initials: "MT",
       rating: 5,
     },
@@ -176,9 +176,9 @@ export const site = {
     },
     {
       quote:
-        "We went from page 3 on Google to #1 for 'Surrey plumber' in about 4 months. The SEO investment has paid for itself ten times over.",
+        "We went from page 3 on Google to #1 for 'Vancouver plumber' in about 4 months. The SEO investment has paid for itself ten times over.",
       name: "Dave M.",
-      business: "ClearFlow Plumbing, Surrey BC",
+      business: "ClearFlow Plumbing, Vancouver BC",
       initials: "DM",
       rating: 5,
     },
@@ -300,7 +300,7 @@ export const site = {
         { title: "AI phone rep for reservations", desc: "Never miss a booking call again — our AI answers 24/7 and books tables straight into your system." },
         { title: "Automated review generation", desc: "Turn happy diners into a steady stream of 5-star Google reviews that match your food quality." },
       ],
-      result: { value: "+40%", label: "walk-in traffic for a Surrey grill" },
+      result: { value: "+40%", label: "walk-in traffic for a Vancouver grill" },
       faqs: [
         { q: "Can you help us fill tables on slow nights?", a: "Yes — geo-targeted Meta ads and time-based promotions are our go-to for turning quiet Tuesdays into full houses." },
         { q: "Do you handle our Google and Yelp reviews?", a: "We set up automated review requests and help you respond, so your online rating finally reflects your actual food." },
@@ -348,7 +348,7 @@ export const site = {
         { title: "24/7 AI call answering", desc: "Capture every burst-pipe call — our AI books the job even while you sleep." },
         { title: "Review-driven reputation", desc: "Build more 5-star reviews than the franchise down the street." },
       ],
-      result: { value: "#1", label: "for \"Surrey plumber\" in 4 months" },
+      result: { value: "#1", label: "for \"Vancouver plumber\" in 4 months" },
       faqs: [
         { q: "Most of my jobs are emergencies — how does SEO help?", a: "Emergency searches are the highest-intent keywords there are. We get you into the map pack for \"emergency plumber [city]\" so you're the first call, not the third." },
         { q: "Can you handle after-hours calls?", a: "Yes — our AI phone rep answers 24/7 and books or dispatches urgent jobs so you never lose a lead overnight." },
