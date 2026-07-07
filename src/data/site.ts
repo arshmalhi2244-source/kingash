@@ -28,6 +28,7 @@ export const site = {
   nav: [
     { label: "Services", href: "/services" },
     { label: "Industries", href: "/industries" },
+    { label: "Results", href: "/results" },
     { label: "About", href: "/about" },
     { label: "Pricing", href: "/pricing" },
     { label: "Blog", href: "/blog" },
@@ -156,6 +157,122 @@ export const site = {
       metaDescription:
         "Rank #1 on Google for your local keywords. Local SEO with Google Business Profile, citations, content, and links. Vancouver, BC and all of Canada.",
     },
+    {
+      slug: "missed-call-text-back",
+      name: "Instant Text-Back",
+      shortDesc: "Miss a call? The caller gets a friendly text back in seconds — before they dial your competitor.",
+      fullDesc:
+        "The average local business misses 1 in 4 calls — and most of those callers never try again, they just call the next name on Google. Instant Text-Back closes that gap. The moment a call goes unanswered, our system fires off a personalized text that keeps the customer engaged, answers their first question, and books them in — automatically, day or night.",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" /></svg>`,
+      benefits: [
+        "Auto-texts every missed caller within 60 seconds",
+        "Recovers up to 80% of leads that would have been lost",
+        "Works 24/7 — after hours, weekends, and holidays",
+        "Fully personalized with your business name and voice",
+        "Two-way texting so customers can reply and book",
+        "Simple dashboard showing every recovered conversation",
+      ],
+      process: [
+        { step: 1, title: "Connect Your Line", desc: "We link Instant Text-Back to your existing business number — no new phone required." },
+        { step: 2, title: "Write Your Message", desc: "We craft the text templates in your tone so every reply sounds like you, not a robot." },
+        { step: 3, title: "Never Lose a Lead", desc: "Go live and start recovering missed calls automatically from day one." },
+      ],
+      faqs: [
+        { q: "Do I need a new phone number?", a: "No. Instant Text-Back works with your existing business number, so callers get a reply from the number they already dialed." },
+        { q: "What does the text actually say?", a: "We write templates in your voice — usually a quick apology for missing the call, a question to keep them engaged, and a link to book. You approve everything before it goes live." },
+        { q: "How is this different from the AI Phone Rep?", a: "The AI Phone Rep answers the call live; Instant Text-Back is the safety net for the moments a call still slips through. Most clients run both together." },
+      ],
+      metaTitle: "Missed Call Text-Back for Local Businesses | KingAsh",
+      metaDescription:
+        "Never lose another lead to a missed call. Instant Text-Back auto-texts callers in seconds so they book with you, not your competitor. Vancouver, BC & all of Canada.",
+    },
+    {
+      slug: "review-automation",
+      name: "Reputation Engine",
+      shortDesc: "Turn happy customers into a steady stream of 5-star Google reviews — automatically.",
+      fullDesc:
+        "Reviews are the new word of mouth. 9 out of 10 customers read them before they call, and the business with the most recent 5-star reviews usually wins. Reputation Engine asks every satisfied customer for a review at the perfect moment, routes unhappy feedback to you privately, and helps you respond fast — so your rating climbs on autopilot while your competitors' goes stale.",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" /></svg>`,
+      benefits: [
+        "Automatic review requests by text and email after every job",
+        "Perfect-timing sends that dramatically boost response rates",
+        "Negative feedback routed to you privately before it goes public",
+        "AI-assisted responses to every review, good or bad",
+        "Live monitoring across Google, Facebook, and more",
+        "Monthly reputation report tracking your star rating over time",
+      ],
+      process: [
+        { step: 1, title: "Connect Your Profiles", desc: "We link your Google Business Profile and other review platforms in one dashboard." },
+        { step: 2, title: "Automate the Ask", desc: "Every completed job triggers a perfectly-timed review request in your voice." },
+        { step: 3, title: "Watch Your Rating Climb", desc: "Reviews roll in, you respond in a click, and your local reputation compounds." },
+      ],
+      faqs: [
+        { q: "How do you get more reviews without being pushy?", a: "Timing and simplicity. We ask right after a positive experience with a one-tap link, which is exactly when customers are happy to help — no nagging required." },
+        { q: "What happens if someone's unhappy?", a: "Unhappy feedback is routed privately to you first, so you can make it right before it ever becomes a public one-star review." },
+        { q: "Do you respond to reviews for me?", a: "We give you AI-drafted responses you can post in one click, and we can handle responses entirely for you on higher plans." },
+      ],
+      metaTitle: "Automated Google Review Generation | Reputation Engine | KingAsh",
+      metaDescription:
+        "Build a 5-star reputation on autopilot. Automated Google review requests, monitoring, and responses for local businesses. Vancouver, BC & all of Canada.",
+    },
+    {
+      slug: "ai-search-optimization",
+      name: "AI Search Optimization",
+      shortDesc: "Get your business recommended by ChatGPT, Google AI, and Perplexity — the new front page of search.",
+      fullDesc:
+        "Search is shifting. More and more customers ask ChatGPT, Google's AI Overviews, and Perplexity \"who's the best plumber near me?\" instead of scrolling ten blue links — and the AI names just a handful of businesses. AI Search Optimization (also called GEO) makes sure yours is one of them. We structure your content, data, and authority signals so the AI models understand, trust, and recommend you first.",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" /></svg>`,
+      benefits: [
+        "Optimization for ChatGPT, Google AI Overviews, and Perplexity",
+        "Structured data and schema the AI models actually read",
+        "Authority and citation building so AI trusts your brand",
+        "Content written to answer the questions customers ask AI",
+        "Tracking of how and where your business gets mentioned",
+        "A first-mover edge while competitors ignore AI search",
+      ],
+      process: [
+        { step: 1, title: "AI Visibility Audit", desc: "We test what today's AI models say about your business and your competitors." },
+        { step: 2, title: "Optimize & Structure", desc: "We rebuild your content, schema, and citations so AI can understand and cite you." },
+        { step: 3, title: "Monitor & Grow", desc: "We track your AI mentions and keep expanding your presence as the models evolve." },
+      ],
+      faqs: [
+        { q: "Is AI search really worth investing in yet?", a: "Yes — this is the ground-floor moment. Millions already start their search inside ChatGPT and Google AI Overviews, and the businesses that optimize now are the ones getting recommended while everyone else is invisible." },
+        { q: "How is this different from regular SEO?", a: "Traditional SEO ranks you in a list of links. AI Search Optimization gets you named directly inside the AI's answer — a different playbook built around structured data, authority, and question-based content." },
+        { q: "Can you prove it's working?", a: "We regularly test your business against real prompts across the major AI platforms and report where and how you're being mentioned over time." },
+      ],
+      metaTitle: "AI Search Optimization (GEO) — Get Found on ChatGPT | KingAsh",
+      metaDescription:
+        "Get recommended by ChatGPT, Google AI Overviews, and Perplexity. AI Search Optimization (GEO) for local businesses. Vancouver, BC & all of Canada.",
+    },
+    {
+      slug: "growth-automation",
+      name: "Growth Automation & CRM",
+      shortDesc: "Automated follow-up and one simple pipeline so no lead ever slips through the cracks.",
+      fullDesc:
+        "Most local businesses lose more revenue to slow follow-up than to a lack of leads. Growth Automation & CRM fixes the leak. Every enquiry — call, form, text, or DM — lands in one pipeline, then automated sequences follow up by text and email until the customer books. You get one clean dashboard showing exactly where every lead stands, so nothing falls through and every dollar of marketing gets worked to the end.",
+      icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>`,
+      benefits: [
+        "Every lead captured in one place — calls, forms, texts, and DMs",
+        "Automated text and email follow-up sequences that close deals",
+        "Appointment reminders that cut no-shows in half",
+        "Lead scoring so you focus on the ready-to-buy customers",
+        "One live pipeline dashboard for you and your team",
+        "Reactivation campaigns that win back past customers",
+      ],
+      process: [
+        { step: 1, title: "Map Your Pipeline", desc: "We learn how your business turns a lead into a booking and build your stages around it." },
+        { step: 2, title: "Automate Follow-Up", desc: "We write and wire the text and email sequences that chase every lead for you." },
+        { step: 3, title: "Run It On Autopilot", desc: "Leads flow in, follow-up runs itself, and you see the whole pipeline at a glance." },
+      ],
+      faqs: [
+        { q: "Do I have to replace my current tools?", a: "Usually not — we can connect your existing calendar, forms, and phone into one pipeline, or set you up from scratch if you'd prefer a clean start." },
+        { q: "What kind of follow-up do you automate?", a: "Instant replies to new enquiries, multi-step text and email sequences, appointment reminders, and win-back campaigns for old leads — all written in your voice." },
+        { q: "Will this feel spammy to customers?", a: "No. Sequences are timed and personalized to feel like prompt, helpful service, and they stop the moment a customer books or replies." },
+      ],
+      metaTitle: "Marketing Automation & CRM for Local Businesses | KingAsh",
+      metaDescription:
+        "Automated lead follow-up, reminders, and one simple CRM pipeline so no lead slips through. Growth Automation for local businesses. Vancouver, BC & all of Canada.",
+    },
   ],
   testimonials: [
     {
@@ -189,7 +306,7 @@ export const site = {
       a: "For a new website, we're typically live within 7–14 business days. If you already have a site, we can start on SEO or ads within 48 hours of onboarding.",
     },
     {
-      q: "Do I need all four services or can I start with just one?",
+      q: "Do I need all of your services or can I start with just one?",
       a: "Absolutely start with one. Most clients begin with a website or SEO, then add services as they see results. We'll recommend what makes the most sense for you.",
     },
     {
@@ -473,6 +590,66 @@ export const site = {
         { q: "How fast do leads get contacted?", a: "Instantly. Our AI responds to every inquiry within seconds, 24/7 — and in real estate, the first agent to respond usually wins the client." },
         { q: "Can you help me stand out from other agents?", a: "Yes — we build your personal brand with a professional site, local content, and a consistent ad presence so you're the recognizable name in your area." },
       ],
+    },
+  ],
+  caseStudies: [
+    {
+      industry: "Restaurant",
+      location: "Vancouver, BC",
+      headline: "3× more weekend reservations in 60 days",
+      metric: "Online reservations per week",
+      timeline: [
+        { label: "Start", value: 11 },
+        { label: "Day 30", value: 21 },
+        { label: "Day 60", value: 34 },
+      ],
+      summary:
+        "A neighbourhood grill was quiet midweek and invisible on Google Maps. We rebuilt their local SEO, added Instant Text-Back for missed calls, and let the AI Phone Rep handle bookings — tripling weekly reservations in two months.",
+      services: ["Local SEO", "Instant Text-Back", "AI Phone Representative"],
+    },
+    {
+      industry: "Hair & Beauty Salon",
+      location: "Burnaby, BC",
+      headline: "42 missed-call bookings recovered in the first month",
+      metric: "Bookings recovered from missed calls",
+      timeline: [
+        { label: "Week 1", value: 7 },
+        { label: "Week 2", value: 18 },
+        { label: "Week 3", value: 31 },
+        { label: "Week 4", value: 42 },
+      ],
+      summary:
+        "Stylists were missing calls mid-appointment and losing clients to the salon down the street. Instant Text-Back caught every missed call within seconds, and the Reputation Engine turned happy clients into a stream of new 5-star reviews.",
+      services: ["Instant Text-Back", "Reputation Engine"],
+    },
+    {
+      industry: "Plumbing",
+      location: "Coquitlam, BC",
+      headline: "0 to 9 page-one Google rankings in 90 days",
+      metric: "First-page Google rankings",
+      timeline: [
+        { label: "Start", value: 0 },
+        { label: "Day 30", value: 3 },
+        { label: "Day 60", value: 6 },
+        { label: "Day 90", value: 9 },
+      ],
+      summary:
+        "A family plumbing company had no website and zero search presence. A fast new site plus local SEO and AI Search Optimization put them on page one for nine high-intent keywords — and inside AI answers when locals ask for a plumber.",
+      services: ["Website Design", "Local SEO", "AI Search Optimization"],
+    },
+    {
+      industry: "Dental Clinic",
+      location: "Richmond, BC",
+      headline: "From 3.9 to 4.8 stars and +38 new patients a month",
+      metric: "New patient bookings per month",
+      timeline: [
+        { label: "Before", value: 22 },
+        { label: "Day 45", value: 41 },
+        { label: "Day 90", value: 60 },
+      ],
+      summary:
+        "An established clinic was being out-marketed by a corporate chain. The Reputation Engine lifted their rating to 4.8 stars while Growth Automation and Meta ads filled the schedule — nearly tripling net new patients each month.",
+      services: ["Reputation Engine", "Growth Automation & CRM", "AI Ads & Meta Ads"],
     },
   ],
 };
