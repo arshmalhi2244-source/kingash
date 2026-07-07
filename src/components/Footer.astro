@@ -60,6 +60,21 @@ import { site } from '../data/site.ts';
         </ul>
       </div>
 
+      <!-- Industries Links -->
+      <div>
+        <h3 class="text-white font-semibold text-sm mb-4">Industries</h3>
+        <ul class="space-y-3" role="list">
+          {site.industries.slice(0, 6).map((ind) => (
+            <li>
+              <a href={`/industries/${ind.slug}`} class="text-slate-400 hover:text-gold-400 text-sm transition-colors">
+                {ind.name}
+              </a>
+            </li>
+          ))}
+          <li><a href="/industries" class="text-gold-400/80 hover:text-gold-400 text-sm transition-colors">All Industries →</a></li>
+        </ul>
+      </div>
+
       <!-- Contact Info -->
       <div>
         <h3 class="text-white font-semibold text-sm mb-4">Contact</h3>

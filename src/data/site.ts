@@ -15,10 +15,10 @@ export const site = {
     bio: "Arsh started KingAsh after watching too many great local businesses fail online — not because their product was bad, but because nobody could find them. His mission: give every brick-and-mortar business the digital firepower to compete and win.",
   },
   address: {
-    city: "Surrey",
+    city: "Vancouver",
     province: "BC",
     country: "Canada",
-    full: "Surrey, BC, Canada",
+    full: "Vancouver, BC, Canada",
   },
   social: {
     instagram: "https://instagram.com/kingashca",
@@ -27,6 +27,7 @@ export const site = {
   },
   nav: [
     { label: "Services", href: "/services" },
+    { label: "Industries", href: "/industries" },
     { label: "About", href: "/about" },
     { label: "Pricing", href: "/pricing" },
     { label: "Blog", href: "/blog" },
@@ -279,5 +280,199 @@ export const site = {
     { slug: "mississauga", name: "Mississauga", province: "ON" },
     { slug: "ottawa", name: "Ottawa", province: "ON" },
     { slug: "winnipeg", name: "Winnipeg", province: "MB" },
+  ],
+  industries: [
+    {
+      slug: "restaurants",
+      name: "Restaurants",
+      keyword: "restaurant marketing",
+      intro:
+        "Restaurants live or die by foot traffic and reservations. When someone nearby is hungry and searching \"best food near me,\" you need to be the first name they see — and the easiest table to book.",
+      painPoints: [
+        "Empty tables on slow weeknights",
+        "Hungry locals can't find you on Google Maps",
+        "No-shows and missed phone reservations",
+        "Great food, but your reviews don't show it",
+      ],
+      tactics: [
+        { title: "Dish-level local SEO", desc: "We optimize your Google Business Profile and site so you rank for \"best [cuisine] near me\" and the specific dishes you're known for." },
+        { title: "Mouth-watering Meta ads", desc: "Geo-targeted Instagram and Facebook ads with scroll-stopping food photography that fills tables on quiet nights." },
+        { title: "AI phone rep for reservations", desc: "Never miss a booking call again — our AI answers 24/7 and books tables straight into your system." },
+        { title: "Automated review generation", desc: "Turn happy diners into a steady stream of 5-star Google reviews that match your food quality." },
+      ],
+      result: { value: "+40%", label: "walk-in traffic for a Surrey grill" },
+      faqs: [
+        { q: "Can you help us fill tables on slow nights?", a: "Yes — geo-targeted Meta ads and time-based promotions are our go-to for turning quiet Tuesdays into full houses." },
+        { q: "Do you handle our Google and Yelp reviews?", a: "We set up automated review requests and help you respond, so your online rating finally reflects your actual food." },
+      ],
+    },
+    {
+      slug: "salons",
+      name: "Hair & Beauty Salons",
+      keyword: "salon marketing",
+      intro:
+        "Salons run on repeat clients and a fully-booked chair. Every missed call while you're mid-appointment is a client walking to the salon down the street.",
+      painPoints: [
+        "Empty chairs and last-minute cancellations",
+        "New stylists starting with no client base",
+        "Missed booking calls during appointments",
+        "Competing salons outranking you on Google",
+      ],
+      tactics: [
+        { title: "\"Salon near me\" local SEO", desc: "Rank in the map pack for your services — balayage, fades, lash extensions — in your city." },
+        { title: "Before/after Instagram ads", desc: "Show off your best work to local clients who are ready to book right now." },
+        { title: "24/7 AI booking rep", desc: "Answers while you're mid-appointment and books clients into your calendar automatically." },
+        { title: "Rebooking & loyalty campaigns", desc: "Automated reminders that keep chairs full and clients coming back on schedule." },
+      ],
+      result: { value: "3x", label: "online bookings for a Burnaby salon" },
+      faqs: [
+        { q: "We miss calls while cutting hair — can you fix that?", a: "That's exactly what our AI phone rep is for. It answers every call and books appointments so you never lose a client to a busy signal." },
+        { q: "Can you promote one specific stylist or service?", a: "Absolutely — we build targeted campaigns around individual stylists or high-margin services like colour and extensions." },
+      ],
+    },
+    {
+      slug: "plumbers",
+      name: "Plumbers",
+      keyword: "plumber marketing",
+      intro:
+        "Plumbing is an emergency business. When a pipe bursts at 2am, the customer calls whoever shows up first on Google — that should be you, every time.",
+      painPoints: [
+        "Losing emergency calls to competitors who rank higher",
+        "Feast-or-famine job flow",
+        "After-hours calls going to voicemail",
+        "Hard to compete with big franchise plumbers",
+      ],
+      tactics: [
+        { title: "Emergency \"plumber near me\" SEO", desc: "Rank at the top for urgent, high-intent searches when customers need you right now." },
+        { title: "Local Service Ads & Meta", desc: "Show up first with the Google Guaranteed badge and geo-targeted local ads." },
+        { title: "24/7 AI call answering", desc: "Capture every burst-pipe call — our AI books the job even while you sleep." },
+        { title: "Review-driven reputation", desc: "Build more 5-star reviews than the franchise down the street." },
+      ],
+      result: { value: "#1", label: "for \"Surrey plumber\" in 4 months" },
+      faqs: [
+        { q: "Most of my jobs are emergencies — how does SEO help?", a: "Emergency searches are the highest-intent keywords there are. We get you into the map pack for \"emergency plumber [city]\" so you're the first call, not the third." },
+        { q: "Can you handle after-hours calls?", a: "Yes — our AI phone rep answers 24/7 and books or dispatches urgent jobs so you never lose a lead overnight." },
+      ],
+    },
+    {
+      slug: "electricians",
+      name: "Electricians",
+      keyword: "electrician marketing",
+      intro:
+        "Word-of-mouth only gets you so far. To keep the calendar full year-round, licensed electricians need to be the trusted, easy-to-find choice online.",
+      painPoints: [
+        "Relying only on word-of-mouth referrals",
+        "Slow winter months with gaps in the schedule",
+        "Competing on price with unlicensed operators",
+        "No online presence to prove licensing and trust",
+      ],
+      tactics: [
+        { title: "Trust-focused local SEO", desc: "Rank for \"[city] electrician\" and put your licensing, insurance, and reviews front and centre." },
+        { title: "High-value service ads", desc: "Target panel upgrades, EV chargers, and rewiring jobs with profitable Meta campaigns." },
+        { title: "AI phone rep for quotes", desc: "Captures job details and books estimates 24/7 so no lead ever slips away." },
+        { title: "Google Business Profile authority", desc: "Photos, reviews, and service lists that make you the obvious licensed choice." },
+      ],
+      result: { value: "2.5x", label: "quote requests in 90 days" },
+      faqs: [
+        { q: "How do I stand out from cheaper unlicensed guys?", a: "We build your online reputation around trust — licensing, insurance, reviews, and real project photos — so customers choose quality over the lowest bid." },
+        { q: "Can you promote high-value services like EV chargers?", a: "Yes — we run targeted campaigns for your most profitable services so you attract better jobs, not just more of them." },
+      ],
+    },
+    {
+      slug: "dentists",
+      name: "Dentists",
+      keyword: "dental marketing",
+      intro:
+        "New patients are the lifeblood of a dental practice. The clinics that grow are the ones that rank for \"dentist near me\" and make booking effortless.",
+      painPoints: [
+        "High cost to acquire each new patient",
+        "Empty appointment slots and cancellations",
+        "Competing with corporate dental chains",
+        "Patients simply choosing whoever ranks first",
+      ],
+      tactics: [
+        { title: "\"Dentist near me\" local SEO", desc: "Dominate the map pack for general, cosmetic, and emergency dental searches." },
+        { title: "New-patient ad funnels", desc: "Targeted Meta offers — whitening, checkups, Invisalign — that fill your schedule." },
+        { title: "AI reception & booking", desc: "Answers patient calls 24/7 and books appointments into your practice system." },
+        { title: "Reputation management", desc: "Turn satisfied patients into a steady stream of 5-star reviews." },
+      ],
+      result: { value: "+35", label: "new patients/mo for a clinic" },
+      faqs: [
+        { q: "What's the best way to get new patients?", a: "A combination of ranking for \"dentist near me\" and running new-patient offers on Meta — together they capture both active searchers and people who didn't know they needed you yet." },
+        { q: "Can you reduce no-shows?", a: "Our AI rep and automated reminders confirm and rebook appointments, cutting no-shows significantly." },
+      ],
+    },
+    {
+      slug: "gyms",
+      name: "Gyms & Fitness Studios",
+      keyword: "gym marketing",
+      intro:
+        "Memberships churn and January rushes don't last. Sustainable growth comes from steady lead flow and members who actually stick around.",
+      painPoints: [
+        "Seasonal sign-up spikes followed by churn",
+        "Empty class schedules",
+        "Fierce competition from big-box gyms and studios",
+        "Leads that never convert to paid memberships",
+      ],
+      tactics: [
+        { title: "Niche \"gym near me\" SEO", desc: "Rank for your specialty — CrossFit, yoga, personal training — in your neighbourhood." },
+        { title: "Free-trial ad funnels", desc: "Meta ads offering a free week or class that turn scrollers into members." },
+        { title: "AI lead follow-up", desc: "Instantly responds to and books trial sign-ups 24/7, before they lose interest." },
+        { title: "Retention campaigns", desc: "Challenges, reminders, and community content that keep members past January." },
+      ],
+      result: { value: "+90%", label: "class bookings in one quarter" },
+      faqs: [
+        { q: "How do I keep members after the January rush?", a: "We build retention campaigns — challenges, class reminders, and community content — that keep members engaged year-round, not just in January." },
+        { q: "Can you fill specific under-booked classes?", a: "Yes — we target ads and promotions around your quiet classes to balance out your whole schedule." },
+      ],
+    },
+    {
+      slug: "auto-repair",
+      name: "Auto Repair Shops",
+      keyword: "auto repair marketing",
+      intro:
+        "Drivers search for a mechanic the moment something breaks. The shop that ranks first — and books the appointment fastest — wins the job.",
+      painPoints: [
+        "Customers only show up when something breaks",
+        "Competing with dealerships and national chains",
+        "Slow days with empty bays",
+        "No system to bring customers back",
+      ],
+      tactics: [
+        { title: "\"Mechanic near me\" local SEO", desc: "Rank for repairs, oil changes, and brakes exactly when local drivers search." },
+        { title: "Service reminder campaigns", desc: "Automatically bring customers back for scheduled maintenance." },
+        { title: "AI phone rep for bookings", desc: "Answers and books service appointments even when your team's under a hood." },
+        { title: "Targeted local ads", desc: "Fill empty bays on slow days with seasonal service promotions." },
+      ],
+      result: { value: "+50%", label: "booked service appointments" },
+      faqs: [
+        { q: "How do I get repeat customers, not just one-time fixes?", a: "Automated service reminders and loyalty campaigns bring customers back for scheduled maintenance, turning one-time repairs into long-term relationships." },
+        { q: "Can you fill empty bays on slow days?", a: "Yes — we run timed local promotions and ads to smooth out your schedule and keep every bay working." },
+      ],
+    },
+    {
+      slug: "real-estate",
+      name: "Real Estate Agents",
+      keyword: "real estate marketing",
+      intro:
+        "In real estate, your personal brand and your speed-to-lead are everything. The agent who responds first — and looks the most credible online — usually wins the client.",
+      painPoints: [
+        "Inconsistent, unpredictable lead flow",
+        "Blending in with every other agent in town",
+        "Slow follow-up losing hot leads",
+        "Relying entirely on referrals",
+      ],
+      tactics: [
+        { title: "Personal-brand site & SEO", desc: "A high-converting agent website that ranks for your neighbourhoods and listings." },
+        { title: "Listing & buyer-lead ads", desc: "Meta ad funnels that generate seller and buyer leads on autopilot." },
+        { title: "AI instant lead response", desc: "Follows up with every inquiry within seconds, 24/7 — speed-to-lead wins deals." },
+        { title: "Neighbourhood authority content", desc: "Local market content that makes you the go-to expert in your area." },
+      ],
+      result: { value: "5x", label: "more qualified leads per month" },
+      faqs: [
+        { q: "How fast do leads get contacted?", a: "Instantly. Our AI responds to every inquiry within seconds, 24/7 — and in real estate, the first agent to respond usually wins the client." },
+        { q: "Can you help me stand out from other agents?", a: "Yes — we build your personal brand with a professional site, local content, and a consistent ad presence so you're the recognizable name in your area." },
+      ],
+    },
   ],
 };
