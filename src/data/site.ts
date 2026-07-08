@@ -386,7 +386,6 @@ export const site = {
     { slug: "vancouver", name: "Vancouver", province: "BC" },
     { slug: "burnaby", name: "Burnaby", province: "BC" },
     { slug: "richmond", name: "Richmond", province: "BC" },
-    { slug: "coquitlam", name: "Coquitlam", province: "BC" },
     { slug: "langley", name: "Langley", province: "BC" },
     { slug: "abbotsford", name: "Abbotsford", province: "BC" },
     { slug: "kelowna", name: "Kelowna", province: "BC" },
@@ -624,7 +623,7 @@ export const site = {
     },
     {
       industry: "Plumbing",
-      location: "Coquitlam, BC",
+      location: "Langley, BC",
       headline: "0 to 9 page-one Google rankings in 90 days",
       metric: "First-page Google rankings",
       timeline: [
