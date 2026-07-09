@@ -31,6 +31,7 @@
   <url><loc>https://kingash.ca/areas/vancouver</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kingash.ca/areas/burnaby</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kingash.ca/areas/richmond</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://kingash.ca/areas/coquitlam</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kingash.ca/areas/langley</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kingash.ca/areas/abbotsford</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://kingash.ca/areas/kelowna</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
