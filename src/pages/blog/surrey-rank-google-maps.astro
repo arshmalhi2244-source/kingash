@@ -1,0 +1,165 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import { site } from '../../data/site.ts';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Surrey Businesses Can Rank #1 on Google Maps",
+    "description": "A practical, step-by-step guide for Surrey business owners who want to rank #1 in the Google Maps local pack and win more local customers.",
+    "author": { "@type": "Person", "name": site.owner.name },
+    "publisher": { "@type": "Organization", "name": site.name, "url": site.website },
+    "datePublished": "2026-05-19",
+    "dateModified": "2026-07-10",
+    "url": `${site.website}/blog/surrey-rank-google-maps`
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": site.website },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${site.website}/blog` },
+      { "@type": "ListItem", "position": 3, "name": "Rank #1 on Google Maps in Surrey", "item": `${site.website}/blog/surrey-rank-google-maps` }
+    ]
+  }
+];
+---
+
+<BaseLayout
+  title="How Surrey Businesses Can Rank #1 on Google Maps (2026) | KingAsh"
+  description="A step-by-step guide for Surrey business owners who want to rank #1 in the Google Maps local pack — from optimizing your Google Business Profile to reviews, citations, and local SEO."
+  schema={schema}
+>
+  <article>
+    <section class="hero-bg relative overflow-hidden py-20 lg:py-24">
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-slate-500">
+            <li><a href="/" class="hover:text-gold-400 transition-colors">Home</a></li>
+            <li class="text-slate-700">/</li>
+            <li><a href="/blog" class="hover:text-gold-400 transition-colors">Blog</a></li>
+            <li class="text-slate-700">/</li>
+            <li class="text-slate-300 truncate">Rank #1 on Google Maps in Surrey</li>
+          </ol>
+        </nav>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="text-xs font-semibold text-gold-500 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">Local SEO</span>
+          <span class="text-slate-500 text-sm">7 min read</span>
+          <span class="text-slate-600 text-sm">May 19, 2026</span>
+          <span class="text-slate-600 text-sm">· Updated July 10, 2026</span>
+        </div>
+        <h1 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+          How Surrey Businesses Can Rank #1 on Google Maps
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed">
+          When someone in Surrey searches "plumber near me" or "best salon in Surrey," three businesses show up in the Google Maps pack — and they get the overwhelming majority of the clicks and calls. Here's exactly how to become one of those three, and ideally the one at the top.
+        </p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="w-9 h-9 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-sm">AM</div>
+          <div>
+            <p class="text-white text-sm font-medium">{site.owner.name}</p>
+            <p class="text-slate-500 text-xs">{site.owner.title}, {site.name}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-navy-950 py-16 lg:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-6 text-slate-400 leading-relaxed">
+          <p class="text-xl text-slate-300 leading-relaxed">
+            Ranking #1 on Google Maps isn't luck, and it isn't about being the biggest business in Surrey. Google's local rankings come down to three things — relevance, distance, and prominence — and every one of them is something you can influence. Here's the playbook.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">What Is the Google Maps "Local Pack"?</h2>
+          <p>
+            The local pack is the set of three business listings with the little map that appears at the top of local searches. For a Surrey business, that real estate is worth more than any other spot on Google — it sits above the regular results and captures the customers who are ready to call or visit right now.
+          </p>
+          <p>
+            Google decides who ranks based on three factors: <strong class="text-slate-200">relevance</strong> (how well your profile matches the search), <strong class="text-slate-200">distance</strong> (how close you are to the searcher), and <strong class="text-slate-200">prominence</strong> (how well-known and trusted your business is). You can't move your storefront, but you can heavily influence the other two.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Step 1: Fully Optimize Your Google Business Profile</h2>
+          <p>
+            Your Google Business Profile (formerly Google My Business) is the single most important factor. A half-filled profile will never rank. Claim it, verify it, and complete every field:
+          </p>
+          <div class="bg-navy-900 border border-white/10 rounded-xl p-6 my-6">
+            <div class="space-y-2 text-sm">
+              {[
+                { label: "Business name", desc: "Your real name — don't stuff keywords, it risks suspension" },
+                { label: "Primary category", desc: "Pick the most specific match (e.g. \"Emergency plumber,\" not just \"Plumber\")" },
+                { label: "Service areas", desc: "List Surrey and surrounding neighbourhoods you serve" },
+                { label: "Hours & attributes", desc: "Accurate hours, plus attributes like \"open 24 hours\" or \"wheelchair accessible\"" },
+                { label: "Photos", desc: "Real photos of your work, team, and storefront — updated regularly" }
+              ].map(item => (
+                <div class="flex gap-3">
+                  <span class="font-semibold text-gold-500 w-36 shrink-0">{item.label}</span>
+                  <span class="text-slate-400">{item.desc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Step 2: Get More (and Better) Reviews</h2>
+          <p>
+            Reviews are the biggest driver of prominence, and they're where most Surrey businesses lose. Google looks at the number of reviews, how recent they are, your overall rating, and whether you respond. A steady stream of new 5-star reviews signals to Google that you're active and trusted.
+          </p>
+          <p>
+            The tactic that works: ask every happy customer, right after you've delivered great service, with a direct link to your review page. Then reply to every review — good or bad — because Google rewards engagement and future customers read your responses.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Step 3: Build Local Citations</h2>
+          <p>
+            A citation is any mention of your business name, address, and phone number (NAP) across the web — Yelp, Yellow Pages, local directories, industry associations. Google uses these to confirm your business is legitimate and located where you say it is. The key is <em>consistency</em>: your NAP must be identical everywhere, down to "Unit" vs. "#" and "Street" vs. "St."
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Step 4: Add Local Content to Your Website</h2>
+          <p>
+            Google connects your website to your Maps listing, so your site should make it obvious you serve Surrey. Create a dedicated Surrey service-area page, mention local neighbourhoods (Guildford, Newton, Cloverdale, South Surrey), and publish content that answers questions local customers actually search. This reinforces relevance for Surrey-specific searches.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Step 5: Post Regularly and Stay Active</h2>
+          <p>
+            Google Business Profile lets you publish posts, offers, and updates. Businesses that post weekly signal to Google that they're active and engaged — which helps rankings and gives potential customers a reason to choose you. It takes ten minutes a week and most of your competitors aren't doing it.
+          </p>
+
+          <div class="bg-gold-500/10 border border-gold-500/20 rounded-2xl p-6 my-8">
+            <h3 class="font-display font-bold text-xl text-white mb-2">The Takeaway</h3>
+            <p class="text-slate-300 mb-0">
+              Ranking #1 on Google Maps in Surrey comes down to a fully optimized Google Business Profile, a steady flow of recent 5-star reviews, consistent local citations, Surrey-focused website content, and regular activity. None of it is complicated — but it takes consistency, and that's exactly why most local businesses never get there.
+            </p>
+          </div>
+
+          <p>
+            Want us to handle it for you? <a href="/contact" class="text-gold-400 hover:text-gold-300 font-semibold underline">Get in touch with KingAsh</a> and we'll audit your current Google Maps rankings and build a plan to get you into the top three.
+          </p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <section class="bg-navy-900 py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display font-bold text-2xl text-white mb-6">Keep Reading</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <a href="/blog/meta-ads-for-local-businesses" class="bg-navy-900 border border-white/10 hover:border-gold-500/30 rounded-xl p-5 transition-colors group">
+          <span class="text-xs text-gold-400 font-semibold">Paid Ads</span>
+          <h3 class="font-display font-semibold text-white group-hover:text-gold-400 transition-colors mt-1 leading-snug">The Complete Guide to Meta Ads for Local Businesses</h3>
+        </a>
+        <a href="/blog/ai-receptionist-vs-hiring-cost-comparison" class="bg-navy-900 border border-white/10 hover:border-gold-500/30 rounded-xl p-5 transition-colors group">
+          <span class="text-xs text-gold-400 font-semibold">AI Automation</span>
+          <h3 class="font-display font-semibold text-white group-hover:text-gold-400 transition-colors mt-1 leading-snug">AI Phone Receptionist vs. Hiring a Receptionist: Cost Comparison</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline="Want to Rank #1 on Google Maps in Surrey?"
+    subtext="We help local businesses climb into the Google Maps top three with proven local SEO — optimized profiles, more reviews, and Surrey-focused content. Let's get you found."
+    primaryCta="Get a Free Local SEO Audit"
+    primaryHref="/services/seo"
+  />
+</BaseLayout>

@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import { site } from '../../data/site.ts';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Phone Receptionist vs. Hiring a Receptionist: Cost Comparison",
+    "description": "A side-by-side cost comparison of an AI phone receptionist versus hiring a human receptionist for a Metro Vancouver small business.",
+    "author": { "@type": "Person", "name": site.owner.name },
+    "publisher": { "@type": "Organization", "name": site.name, "url": site.website },
+    "datePublished": "2026-05-05",
+    "dateModified": "2026-07-10",
+    "url": `${site.website}/blog/ai-receptionist-vs-hiring-cost-comparison`
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": site.website },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${site.website}/blog` },
+      { "@type": "ListItem", "position": 3, "name": "AI vs Human Receptionist", "item": `${site.website}/blog/ai-receptionist-vs-hiring-cost-comparison` }
+    ]
+  }
+];
+---
+
+<BaseLayout
+  title="AI Phone Receptionist vs. Hiring a Receptionist: Cost Comparison (2026) | KingAsh"
+  description="AI phone receptionist vs. hiring a receptionist — a real cost comparison for Metro Vancouver small businesses. See the yearly numbers, pros and cons, and which one wins in 2026."
+  schema={schema}
+>
+  <article>
+    <section class="hero-bg relative overflow-hidden py-20 lg:py-24">
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-slate-500">
+            <li><a href="/" class="hover:text-gold-400 transition-colors">Home</a></li>
+            <li class="text-slate-700">/</li>
+            <li><a href="/blog" class="hover:text-gold-400 transition-colors">Blog</a></li>
+            <li class="text-slate-700">/</li>
+            <li class="text-slate-300 truncate">AI vs Human Receptionist</li>
+          </ol>
+        </nav>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="text-xs font-semibold text-gold-500 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">AI Automation</span>
+          <span class="text-slate-500 text-sm">6 min read</span>
+          <span class="text-slate-600 text-sm">May 5, 2026</span>
+          <span class="text-slate-600 text-sm">· Updated July 10, 2026</span>
+        </div>
+        <h1 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+          AI Phone Receptionist vs. Hiring a Receptionist: Cost Comparison
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed">
+          For a Metro Vancouver small business, a human receptionist is a serious line item — salary, benefits, breaks, sick days, and all the hours the desk simply sits empty. An AI phone receptionist answers every call, 24/7, for a fraction of the price. Here's the honest side-by-side so you can decide what fits your business.
+        </p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="w-9 h-9 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-sm">AM</div>
+          <div>
+            <p class="text-white text-sm font-medium">{site.owner.name}</p>
+            <p class="text-slate-500 text-xs">{site.owner.title}, {site.name}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-navy-950 py-16 lg:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-6 text-slate-400 leading-relaxed">
+          <p class="text-xl text-slate-300 leading-relaxed">
+            An AI phone receptionist costs roughly $200–$500 per month, while a full-time human receptionist in Metro Vancouver runs about $48,000–$62,000 per year once you include benefits and payroll costs. That makes the AI option roughly 80–90% cheaper — and it answers every call 24/7 instead of just 40 hours a week. Below is the honest side-by-side, including where a human still wins.
+          </p>
+          <p>
+            Every missed call is a missed customer — and for most local businesses in Vancouver, Surrey, and Burnaby, missed calls are the single biggest leak in the bucket. The traditional fix is hiring a receptionist. The modern fix is an AI phone representative. Let's compare what each actually costs in 2026.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">How Much Does a Human Receptionist Actually Cost in Metro Vancouver?</h2>
+          <p>
+            In the Lower Mainland, a full-time receptionist typically earns $40,000–$52,000 per year. But salary is only part of the story. Once you add CPP, EI, vacation pay, and general overhead, the true cost climbs to roughly $48,000–$62,000 a year — and that still only buys you about 40 hours of coverage a week.
+          </p>
+          <p>
+            That means nights, weekends, lunch breaks, sick days, and vacations are all uncovered. In a market as competitive as Metro Vancouver, every one of those gaps is a call that rings out — and a customer who simply dials the next business on Google.
+          </p>
+
+          <div class="bg-navy-900 border border-white/10 rounded-xl p-6 my-6">
+            <p class="text-sm font-semibold text-slate-300 mb-3">Human Receptionist — Annual Cost (CAD)</p>
+            <div class="space-y-2 text-sm">
+              {[
+                { range: "$40,000+", desc: "Base salary for full-time coverage in Metro Vancouver" },
+                { range: "+ 15–20%", desc: "Payroll taxes, benefits, and vacation pay" },
+                { range: "Nights/weekends", desc: "Not covered — after-hours calls go unanswered" },
+                { range: "Sick days & breaks", desc: "Every gap is a call that rings out or hits voicemail" }
+              ].map(item => (
+                <div class="flex gap-3">
+                  <span class="font-semibold text-gold-500 w-32 shrink-0">{item.range}</span>
+                  <span class="text-slate-400">{item.desc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">How Much Does an AI Phone Receptionist Cost?</h2>
+          <p>
+            An AI phone representative is a fraction of that. Depending on your call volume, most local businesses pay a few hundred dollars a month — often $200–$500 — for a system that answers every single call, day or night, with no salary, no benefits, and no time off.
+          </p>
+          <p>
+            It picks up on the first ring, books appointments, answers your most common questions, captures lead details, and escalates urgent calls straight to your cell. It never has a bad day, never calls in sick, and handles ten calls at once during your busy season without missing a beat.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Side by Side</h2>
+
+          <div class="bg-navy-900 border border-white/10 rounded-xl p-6 my-6">
+            <div class="space-y-3 text-sm">
+              {[
+                { factor: "Yearly cost", human: "$48,000–$62,000", ai: "$2,400–$6,000" },
+                { factor: "Availability", human: "~40 hrs/week", ai: "24/7/365" },
+                { factor: "Simultaneous calls", human: "One at a time", ai: "Unlimited" },
+                { factor: "Sick days / breaks", human: "Yes — coverage gaps", ai: "None" },
+                { factor: "Setup time", human: "Weeks to hire & train", ai: "A few days" }
+              ].map(item => (
+                <div class="grid grid-cols-3 gap-3 border-b border-white/5 pb-2 last:border-0 last:pb-0">
+                  <span class="text-slate-300 font-medium">{item.factor}</span>
+                  <span class="text-slate-400">{item.human}</span>
+                  <span class="text-gold-400 font-semibold">{item.ai}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Where Does a Human Receptionist Still Win?</h2>
+          <p>
+            This isn't about pretending AI is perfect. A human receptionist reads emotion, handles complex or sensitive conversations, and adds a personal touch that matters for some businesses — high-end clinics, law firms, and relationship-driven services. If your calls are nuanced and relatively few, a person may still be the right choice.
+          </p>
+          <p>
+            But for the vast majority of local businesses — salons, plumbers, auto shops, dentists, gyms — most calls are simple: "Are you open?", "How much is X?", "Can I book Tuesday?" Those are exactly the calls AI handles flawlessly, and exactly the calls that get missed when a human is busy, on break, or already gone home for the day.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Why Does This Matter More in a Competitive Market?</h2>
+          <p>
+            In Metro Vancouver, your customers have options a two-minute drive away. Studies consistently show that when a call goes to voicemail, most people don't leave a message — they just call the next result. If you're paying for Google Ads or ranking hard for local SEO, every missed call is money you spent to send a customer straight to a competitor. An AI receptionist plugs that leak instantly.
+          </p>
+
+          <div class="bg-gold-500/10 border border-gold-500/20 rounded-2xl p-6 my-8">
+            <h3 class="font-display font-bold text-xl text-white mb-2">The Takeaway</h3>
+            <p class="text-slate-300 mb-0">
+              A human receptionist costs $48,000–$62,000 a year and covers roughly 40 hours a week. An AI phone receptionist costs a few thousand a year and covers every hour of every day. For most Metro Vancouver businesses, AI captures more leads at roughly a tenth of the cost — and many owners pair the two, letting AI catch overflow and after-hours calls their front desk can't.
+            </p>
+          </div>
+
+          <p>
+            Curious what an AI phone rep would cost for your call volume? <a href="/contact" class="text-gold-400 hover:text-gold-300 font-semibold underline">Get in touch with KingAsh</a> and we'll set one up trained on your business, your services, and your pricing.
+          </p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <section class="bg-navy-900 py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display font-bold text-2xl text-white mb-6">Keep Reading</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <a href="/blog/ai-phone-representative-guide" class="bg-navy-900 border border-white/10 hover:border-gold-500/30 rounded-xl p-5 transition-colors group">
+          <span class="text-xs text-gold-400 font-semibold">AI Automation</span>
+          <h3 class="font-display font-semibold text-white group-hover:text-gold-400 transition-colors mt-1 leading-snug">How AI Phone Reps Help Local Businesses Never Miss a Call</h3>
+        </a>
+        <a href="/blog/meta-ads-for-local-businesses" class="bg-navy-900 border border-white/10 hover:border-gold-500/30 rounded-xl p-5 transition-colors group">
+          <span class="text-xs text-gold-400 font-semibold">Paid Ads</span>
+          <h3 class="font-display font-semibold text-white group-hover:text-gold-400 transition-colors mt-1 leading-snug">The Complete Guide to Meta Ads for Local Businesses</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline="Never Miss Another Call"
+    subtext="Our AI phone representative answers every call 24/7, books appointments, and captures leads — for a fraction of the cost of hiring. Let's set one up for your Metro Vancouver business."
+    primaryCta="Get an AI Phone Rep"
+    primaryHref="/services/ai-phone-representative"
+  />
+</BaseLayout>

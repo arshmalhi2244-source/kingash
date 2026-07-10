@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import { site } from '../../data/site.ts';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Do Facebook Ads Still Work for Local Businesses in 2026?",
+    "description": "Do Facebook ads still work for local businesses in 2026? A data-backed look at reach, cost, and ROI — and when they're worth it for Metro Vancouver businesses.",
+    "author": { "@type": "Person", "name": site.owner.name },
+    "publisher": { "@type": "Organization", "name": site.name, "url": site.website },
+    "datePublished": "2026-06-02",
+    "dateModified": "2026-07-10",
+    "url": `${site.website}/blog/do-facebook-ads-still-work-local-businesses`
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": site.website },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${site.website}/blog` },
+      { "@type": "ListItem", "position": 3, "name": "Do Facebook Ads Still Work?", "item": `${site.website}/blog/do-facebook-ads-still-work-local-businesses` }
+    ]
+  }
+];
+---
+
+<BaseLayout
+  title="Do Facebook Ads Still Work for Local Businesses in 2026? | KingAsh"
+  description="Do Facebook ads still work for local businesses in 2026? What the data says about reach, cost, and ROI — plus when they're worth it and when they're not for Metro Vancouver businesses."
+  schema={schema}
+>
+  <article>
+    <section class="hero-bg relative overflow-hidden py-20 lg:py-24">
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-slate-500">
+            <li><a href="/" class="hover:text-gold-400 transition-colors">Home</a></li>
+            <li class="text-slate-700">/</li>
+            <li><a href="/blog" class="hover:text-gold-400 transition-colors">Blog</a></li>
+            <li class="text-slate-700">/</li>
+            <li class="text-slate-300 truncate">Do Facebook Ads Still Work?</li>
+          </ol>
+        </nav>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="text-xs font-semibold text-gold-500 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">Paid Ads</span>
+          <span class="text-slate-500 text-sm">7 min read</span>
+          <span class="text-slate-600 text-sm">June 2, 2026</span>
+          <span class="text-slate-600 text-sm">· Updated July 10, 2026</span>
+        </div>
+        <h1 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+          Do Facebook Ads Still Work for Local Businesses in 2026?
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed">
+          "Isn't Facebook dead? Aren't the young people all on TikTok?" We hear it every week from local business owners. It's a fair question — so instead of opinions, let's look at what the data actually says about Facebook ads for local businesses in 2026.
+        </p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="w-9 h-9 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-sm">AM</div>
+          <div>
+            <p class="text-white text-sm font-medium">{site.owner.name}</p>
+            <p class="text-slate-500 text-xs">{site.owner.title}, {site.name}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-navy-950 py-16 lg:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-6 text-slate-400 leading-relaxed">
+          <p class="text-xl text-slate-300 leading-relaxed">
+            The short answer: yes — Facebook ads still work extremely well for local businesses, arguably better than ever for local targeting. But the platform has changed, and the businesses that "tried Facebook and it didn't work" almost always made the same handful of mistakes. Let's separate the myth from the data.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Myth: "Nobody Uses Facebook Anymore"</h2>
+          <p>
+            This is the most common misconception, and it's simply not true. Around three-quarters of Canadian adults still use a Meta platform — Facebook or Instagram — every single month, and the fastest-growing age group on Facebook is 35–65+: precisely the people with money to spend on local services like renovations, dental work, legal help, and home repair.
+          </p>
+          <p>
+            More importantly, Facebook and Instagram share the same ad system. So even if your ideal customer prefers Instagram, you reach them through the exact same campaign. The audience isn't shrinking — it's just spread across two apps you can target at once.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">What Does the Data Say About ROI?</h2>
+          <p>
+            For local businesses, Meta ads remain one of the most cost-effective channels available. Here's what typical, well-run local campaigns look like:
+          </p>
+
+          <div class="bg-navy-900 border border-white/10 rounded-xl p-6 my-6">
+            <p class="text-sm font-semibold text-slate-300 mb-3">Typical Local Campaign Benchmarks (2026)</p>
+            <div class="space-y-2 text-sm">
+              {[
+                { range: "$5–$15", desc: "Cost per lead for many local service businesses" },
+                { range: "1,000s", desc: "Local people reached per day on a modest budget" },
+                { range: "5–10 km", desc: "Radius targeting to reach only nearby customers" },
+                { range: "3–8x", desc: "Return on ad spend achievable once campaigns are optimized" }
+              ].map(item => (
+                <div class="flex gap-3">
+                  <span class="font-semibold text-gold-500 w-24 shrink-0">{item.range}</span>
+                  <span class="text-slate-400">{item.desc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <p>
+            Compare that to a newspaper ad, a flyer drop, or a billboard — none of which can tell you how many customers they generated. Meta ads are measurable to the dollar, which is exactly why they still dominate local marketing budgets.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Why Do Some Businesses Say "It Didn't Work"?</h2>
+          <p>
+            When a local business tells us Facebook ads flopped, it's almost always one of these:
+          </p>
+          <div class="bg-navy-900 border border-white/10 rounded-xl p-6 my-6">
+            <div class="space-y-3 text-sm">
+              {[
+                { label: "They boosted a post", desc: "Boosting optimizes for likes, not customers. It's the #1 way to waste money." },
+                { label: "They quit too early", desc: "The algorithm needs ~2 weeks to learn. Pulling ads after 5 days guarantees failure." },
+                { label: "Weak offer or creative", desc: "\"Come visit us\" doesn't convert. A clear, time-limited offer does." },
+                { label: "No follow-up", desc: "Leads came in but nobody called them back fast enough." }
+              ].map(item => (
+                <div class="flex flex-col sm:flex-row sm:gap-4">
+                  <span class="font-semibold text-gold-500 w-40 shrink-0">{item.label}</span>
+                  <span class="text-slate-400">{item.desc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">When Are Facebook Ads Worth It?</h2>
+          <p>
+            Facebook ads shine when you're building demand — reaching people before they're actively searching. That makes them ideal for restaurants, salons, gyms, med spas, home services, and any local business with a compelling offer or strong visuals. If you have something worth showing and a clear reason to act now, Meta will put it in front of the right people in your area for a few dollars a lead.
+          </p>
+          <p>
+            Where they're weaker: pure emergency services where customers only search at the moment of need (a burst pipe at 2 a.m.). For those, Google is the better first dollar — though many businesses run both and let Facebook build the brand people search for later.
+          </p>
+
+          <div class="bg-gold-500/10 border border-gold-500/20 rounded-2xl p-6 my-8">
+            <h3 class="font-display font-bold text-xl text-white mb-2">The Takeaway</h3>
+            <p class="text-slate-300 mb-0">
+              Facebook ads absolutely still work for local businesses in 2026 — the audience is huge, the targeting is unmatched, and the cost per lead is among the lowest of any channel. The businesses that "fail" almost always boosted posts, quit too early, or had a weak offer. Run proper campaigns with patience and a real offer, and the data says you'll win.
+            </p>
+          </div>
+
+          <p>
+            Want to see what Facebook and Instagram ads could do for your business? <a href="/contact" class="text-gold-400 hover:text-gold-300 font-semibold underline">Get in touch with KingAsh</a> and we'll build you a free strategy tailored to your market and budget.
+          </p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <section class="bg-navy-900 py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display font-bold text-2xl text-white mb-6">Keep Reading</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <a href="/blog/meta-ads-for-local-businesses" class="bg-navy-900 border border-white/10 hover:border-gold-500/30 rounded-xl p-5 transition-colors group">
+          <span class="text-xs text-gold-400 font-semibold">Paid Ads</span>
+          <h3 class="font-display font-semibold text-white group-hover:text-gold-400 transition-colors mt-1 leading-snug">The Complete Guide to Meta Ads for Local Businesses</h3>
+        </a>
+        <a href="/blog/surrey-rank-google-maps" class="bg-navy-900 border border-white/10 hover:border-gold-500/30 rounded-xl p-5 transition-colors group">
+          <span class="text-xs text-gold-400 font-semibold">Local SEO</span>
+          <h3 class="font-display font-semibold text-white group-hover:text-gold-400 transition-colors mt-1 leading-snug">How Surrey Businesses Can Rank #1 on Google Maps</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline="Want Facebook Ads That Actually Bring in Customers?"
+    subtext="We build and manage Facebook & Instagram campaigns for local businesses starting at $200/mo — proper campaigns, strong offers, and results you can measure."
+    primaryCta="Get a Free Ads Strategy"
+    primaryHref="/services/ai-ads-meta-ads"
+  />
+</BaseLayout>

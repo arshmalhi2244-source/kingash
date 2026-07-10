@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CTASection from '../../components/CTASection.astro';
+import { site } from '../../data/site.ts';
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Much Does a Website Cost for a Small Business in Canada? (2026)",
+    "description": "A clear breakdown of what a small business website actually costs in Canada in 2026 — DIY, freelancer, and agency pricing, plus ongoing costs.",
+    "author": { "@type": "Person", "name": site.owner.name },
+    "publisher": { "@type": "Organization", "name": site.name, "url": site.website },
+    "datePublished": "2026-04-21",
+    "dateModified": "2026-07-10",
+    "url": `${site.website}/blog/website-cost-small-business-canada`
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": site.website },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${site.website}/blog` },
+      { "@type": "ListItem", "position": 3, "name": "Website Cost in Canada", "item": `${site.website}/blog/website-cost-small-business-canada` }
+    ]
+  }
+];
+---
+
+<BaseLayout
+  title="How Much Does a Website Cost for a Small Business in Canada? (2026) | KingAsh"
+  description="A clear, no-fluff breakdown of what a small business website actually costs in Canada in 2026 — DIY, freelancer, and agency pricing, plus the ongoing costs nobody warns you about."
+  schema={schema}
+>
+  <article>
+    <section class="hero-bg relative overflow-hidden py-20 lg:py-24">
+      <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Breadcrumb" class="mb-8">
+          <ol class="flex items-center gap-2 text-sm text-slate-500">
+            <li><a href="/" class="hover:text-gold-400 transition-colors">Home</a></li>
+            <li class="text-slate-700">/</li>
+            <li><a href="/blog" class="hover:text-gold-400 transition-colors">Blog</a></li>
+            <li class="text-slate-700">/</li>
+            <li class="text-slate-300 truncate">Website Cost in Canada</li>
+          </ol>
+        </nav>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="text-xs font-semibold text-gold-500 bg-gold-500/10 border border-gold-500/20 px-3 py-1 rounded-full">Website Design</span>
+          <span class="text-slate-500 text-sm">8 min read</span>
+          <span class="text-slate-600 text-sm">April 21, 2026</span>
+          <span class="text-slate-600 text-sm">· Updated July 10, 2026</span>
+        </div>
+        <h1 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-5 leading-tight">
+          How Much Does a Website Cost for a Small Business in Canada? (2026)
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed">
+          "How much does a website cost?" is the most common question we get — and the honest answer is "it depends." So instead of dodging it, here's a straight breakdown of real Canadian pricing in 2026, what drives the cost up or down, and the ongoing fees most people forget to budget for.
+        </p>
+        <div class="mt-6 flex items-center gap-3">
+          <div class="w-9 h-9 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center text-white font-bold text-sm">AM</div>
+          <div>
+            <p class="text-white text-sm font-medium">{site.owner.name}</p>
+            <p class="text-slate-500 text-xs">{site.owner.title}, {site.name}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-navy-950 py-16 lg:py-20">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-6 text-slate-400 leading-relaxed">
+          <p class="text-xl text-slate-300 leading-relaxed">
+            The short version: a small business website in Canada can cost anywhere from $0 to $30,000+. That range is useless on its own, so let's break it into the three routes almost everyone actually chooses — and what you really get at each price point.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">What Are the Three Ways to Get a Website (and What Does Each Cost)?</h2>
+
+          <div class="bg-navy-900 border border-white/10 rounded-xl p-6 my-6">
+            <div class="space-y-4 text-sm">
+              {[
+                { range: "$0 – $500", label: "DIY builders", desc: "Wix, Squarespace, or GoDaddy. You do everything yourself — plus monthly subscription fees." },
+                { range: "$800 – $5,000", label: "Freelancer", desc: "An individual designer. Quality varies wildly; you manage the relationship and revisions." },
+                { range: "$3,000 – $15,000+", label: "Agency", desc: "Strategy, design, copywriting, SEO, and support — built to convert, not just exist." }
+              ].map(item => (
+                <div class="flex flex-col sm:flex-row sm:gap-4">
+                  <span class="font-semibold text-gold-500 w-40 shrink-0">{item.range}</span>
+                  <div>
+                    <span class="text-slate-200 font-medium">{item.label}</span>
+                    <span class="text-slate-400"> — {item.desc}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Option 1: DIY Website Builders ($0–$500/year)</h2>
+          <p>
+            Platforms like Wix, Squarespace, and Shopify let you build a site yourself with drag-and-drop tools. The upfront cost is low — usually $18–$50/month CAD for a business plan, so roughly $250–$600 per year once you add a domain.
+          </p>
+          <p>
+            The catch is your time and the result. A DIY site can work for a brand-new business testing an idea, but most look like templates, load slowly, and rarely rank on Google without a lot of extra effort. If your website is a "nice to have," DIY is fine. If it needs to bring in customers, it usually falls short.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Option 2: Hiring a Freelancer ($800–$5,000)</h2>
+          <p>
+            A freelance web designer is the middle ground. In Canada, expect $800–$2,000 for a simple brochure site and $2,000–$5,000 for something more custom. The upside is a human building it for you. The downside is inconsistency — you're relying on one person's skill, availability, and follow-through.
+          </p>
+          <p>
+            Freelancers are a great fit when you know exactly what you want and just need someone to execute. They're a risk when you also need strategy, copy, SEO, and someone to answer the phone six months later when something breaks.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">Option 3: A Marketing Agency ($3,000–$15,000+)</h2>
+          <p>
+            An agency isn't just building a website — it's building a customer-acquisition tool. That price includes strategy, professional design, conversion-focused copywriting, mobile optimization, on-page SEO, and ongoing support. For a local brick-and-mortar business, that's usually the difference between a site that sits there and a site that books appointments.
+          </p>
+          <p>
+            At KingAsh, most local business websites land in the $3,000–$6,000 range, launch in 7–14 days, and are built specifically to turn visitors into paying customers — not to win design awards.
+          </p>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">What Are the Ongoing Costs Nobody Warns You About?</h2>
+          <p>
+            Whatever route you choose, budget for the recurring costs. These are small individually but add up:
+          </p>
+
+          <div class="bg-navy-900 border border-white/10 rounded-xl p-6 my-6">
+            <p class="text-sm font-semibold text-slate-300 mb-3">Typical Annual Ongoing Costs (CAD)</p>
+            <div class="space-y-2 text-sm">
+              {[
+                { range: "$15–$30/yr", desc: "Domain name registration" },
+                { range: "$120–$600/yr", desc: "Web hosting (or included with a builder plan)" },
+                { range: "$0–$300/yr", desc: "SSL, plugins, email, and security tools" },
+                { range: "$50–$200/mo", desc: "Optional maintenance, updates, and content changes" }
+              ].map(item => (
+                <div class="flex gap-3">
+                  <span class="font-semibold text-gold-500 w-28 shrink-0">{item.range}</span>
+                  <span class="text-slate-400">{item.desc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-10 mb-4">So What Should You Actually Spend?</h2>
+          <p>
+            Think about what a new customer is worth to you. If your average customer is worth $500–$2,000 in lifetime value, a website that brings in even one or two extra customers a month pays for itself in weeks. In that light, the real question isn't "how cheap can I get a website" — it's "which website will actually make me money."
+          </p>
+
+          <div class="bg-gold-500/10 border border-gold-500/20 rounded-2xl p-6 my-8">
+            <h3 class="font-display font-bold text-xl text-white mb-2">The Takeaway</h3>
+            <p class="text-slate-300 mb-0">
+              A small business website in Canada realistically costs $0–$500 DIY, $800–$5,000 with a freelancer, or $3,000–$15,000+ with an agency — plus a few hundred dollars a year to keep it running. Cheaper isn't better or worse; it's about matching the investment to how much you need the site to earn.
+            </p>
+          </div>
+
+          <p>
+            Want a straight quote for your business — no pressure, no jargon? <a href="/contact" class="text-gold-400 hover:text-gold-300 font-semibold underline">Get in touch with KingAsh</a> and we'll tell you exactly what your project would cost and what it would deliver.
+          </p>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <section class="bg-navy-900 py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display font-bold text-2xl text-white mb-6">Keep Reading</h2>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <a href="/blog/5-reasons-your-local-business-needs-a-professional-website" class="bg-navy-900 border border-white/10 hover:border-gold-500/30 rounded-xl p-5 transition-colors group">
+          <span class="text-xs text-gold-400 font-semibold">Website Design</span>
+          <h3 class="font-display font-semibold text-white group-hover:text-gold-400 transition-colors mt-1 leading-snug">5 Reasons Your Business Needs a Professional Website</h3>
+        </a>
+        <a href="/blog/ai-receptionist-vs-hiring-cost-comparison" class="bg-navy-900 border border-white/10 hover:border-gold-500/30 rounded-xl p-5 transition-colors group">
+          <span class="text-xs text-gold-400 font-semibold">AI Automation</span>
+          <h3 class="font-display font-semibold text-white group-hover:text-gold-400 transition-colors mt-1 leading-snug">AI Phone Receptionist vs. Hiring a Receptionist: Cost Comparison</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTASection
+    headline="Ready for a Website That Actually Pays for Itself?"
+    subtext="We build fast, conversion-focused websites for local businesses across Canada — usually live in 7–14 days. Get a straight quote with no pressure."
+    primaryCta="Get a Free Website Quote"
+    primaryHref="/services/website-design"
+  />
+</BaseLayout>

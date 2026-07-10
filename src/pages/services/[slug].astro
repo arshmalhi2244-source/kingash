@@ -24,7 +24,8 @@ const schema = [
       "name": site.name,
       "url": site.website
     },
-    "areaServed": "Canada"
+    "areaServed": "Canada",
+    "dateModified": "2026-07-10"
   },
   {
     "@context": "https://schema.org",
@@ -71,7 +72,8 @@ const schema = [
         <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-5">
           {service.name}
         </h1>
-        <p class="text-slate-400 text-lg leading-relaxed mb-8">{service.fullDesc}</p>
+        <p class="text-slate-400 text-lg leading-relaxed mb-3">{service.fullDesc}</p>
+        <p class="text-slate-600 text-xs mb-8">Last updated: July 10, 2026</p>
         <div class="flex flex-col sm:flex-row gap-4">
           <a
             href="/contact"

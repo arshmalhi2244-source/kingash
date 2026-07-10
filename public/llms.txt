@@ -1,22 +1,80 @@
-# KingAsh Marketing Agency — llms.txt
+# KingAsh Marketing Agency
+
+> KingAsh is a marketing agency in Surrey, BC that helps local businesses grow with AI-powered websites, phone agents, ads, and local SEO. Based in Surrey and serving the Lower Mainland (Surrey, Vancouver, Burnaby, Richmond, Coquitlam, Langley, Abbotsford and beyond), KingAsh gives brick-and-mortar businesses enterprise-level marketing at small-business prices. All services are month-to-month with no long-term contracts.
 
 ## About
-KingAsh Marketing Agency is an AI-powered marketing agency based in Surrey, BC, Canada.
-We help local brick-and-mortar businesses grow through websites, AI phone representatives,
-Meta advertising, and local SEO.
+
+- **Name:** KingAsh Marketing Agency
+- **Founder:** Arsh Malhi (Founder & CEO)
+- **Location:** Based in Surrey, BC, Canada
+- **Service area:** The Lower Mainland and across Canada
+- **Who it's for:** Local brick-and-mortar businesses — restaurants, salons, plumbers, electricians, dentists, gyms, auto repair shops, real estate agents, and other local service businesses
+- **What makes it different:** Specializes only in local businesses, uses AI to deliver big-agency results at small-agency prices, focuses on revenue and real leads over vanity metrics, and works month-to-month.
 
 ## Services
-- Website Design: starting at $100
-- AI Phone Representative: starting at $200/mo
-- AI Ads & Meta Ads: starting at $200/mo
-- Local SEO: starting at $250/mo
+
+- [Website Design](https://kingash.ca/services/website-design): Fast, mobile-first, high-converting websites for local businesses. Starting at $100.
+- [AI Phone Representative](https://kingash.ca/services/ai-phone-representative): A 24/7 AI voice agent that answers calls, books appointments, and handles inquiries. Starting at $200/mo.
+- [AI Ads & Meta Ads](https://kingash.ca/services/ai-ads-meta-ads): AI-targeted Facebook and Instagram advertising for local customers. Starting at $200/mo.
+- [Local SEO](https://kingash.ca/services/seo): Google Business Profile, citations, content, and links to rank #1 in local search. Starting at $250/mo.
+- [Instant Text-Back](https://kingash.ca/services/missed-call-text-back): Automatically texts back every missed caller within ~60 seconds so leads aren't lost.
+- [Reputation Engine](https://kingash.ca/services/review-automation): Automated 5-star Google review generation, monitoring, and responses.
+- [AI Search Optimization (GEO)](https://kingash.ca/services/ai-search-optimization): Get recommended by ChatGPT, Google AI Overviews, and Perplexity.
+- [Growth Automation & CRM](https://kingash.ca/services/growth-automation): One pipeline plus automated follow-up so no lead slips through the cracks.
+
+## Pricing Plans
+
+- **Starter — $499/mo:** Professional 5-page website, Google Business Profile setup, basic on-page SEO, monthly reporting.
+- **Growth — $899/mo:** Everything in Starter plus full local SEO, Meta Ads management (up to $500 ad spend), monthly blog content, competitor tracking.
+- **Elite — $1,499/mo:** Everything in Growth plus 24/7 AI Phone Representative, unlimited ad-spend management, custom landing pages, dedicated account manager.
+
+See full details: [Pricing](https://kingash.ca/pricing)
+
+## Industries Served
+
+- [Restaurants](https://kingash.ca/industries/restaurants)
+- [Hair & Beauty Salons](https://kingash.ca/industries/salons)
+- [Plumbers](https://kingash.ca/industries/plumbers)
+- [Electricians](https://kingash.ca/industries/electricians)
+- [Dentists](https://kingash.ca/industries/dentists)
+- [Gyms & Fitness Studios](https://kingash.ca/industries/gyms)
+- [Auto Repair Shops](https://kingash.ca/industries/auto-repair)
+- [Real Estate Agents](https://kingash.ca/industries/real-estate)
+
+## Service Areas
+
+Surrey, Vancouver, Burnaby, Richmond, Coquitlam, Langley, and Abbotsford (Lower Mainland, BC), plus Kelowna, Victoria, Calgary, Edmonton, Toronto, Mississauga, Ottawa, and Winnipeg. Browse all: [Service Areas](https://kingash.ca/areas)
+
+## Blog
+
+Guides answering the questions local business owners ask about marketing, websites, and AI:
+
+- [How Much Does a Website Cost for a Small Business in Canada?](https://kingash.ca/blog/website-cost-small-business-canada)
+- [How to Rank on Google Maps in Surrey](https://kingash.ca/blog/surrey-rank-google-maps)
+- [Do Facebook Ads Still Work for Local Businesses?](https://kingash.ca/blog/do-facebook-ads-still-work-local-businesses)
+- [AI Receptionist vs. Hiring: A Cost Comparison](https://kingash.ca/blog/ai-receptionist-vs-hiring-cost-comparison)
+- [How AI Phone Representatives Help Local Businesses Never Miss a Call](https://kingash.ca/blog/ai-phone-representative-guide)
+- [Meta Ads for Local Businesses](https://kingash.ca/blog/meta-ads-for-local-businesses)
+- [5 Reasons Your Local Business Needs a Professional Website](https://kingash.ca/blog/5-reasons-your-local-business-needs-a-professional-website)
+- [All blog posts](https://kingash.ca/blog)
+
+## Key Pages
+
+- [Home](https://kingash.ca)
+- [Services](https://kingash.ca/services)
+- [Industries](https://kingash.ca/industries)
+- [Results / Case Studies](https://kingash.ca/results)
+- [About](https://kingash.ca/about)
+- [Pricing](https://kingash.ca/pricing)
+- [Contact](https://kingash.ca/contact)
 
 ## Contact
-- Website: https://kingash.ca
-- Phone: (236) 380-5700
-- Email: arshmalhi2244@gmail.com
-- Location: Surrey, BC, Canada
+
+- **Website:** https://kingash.ca
+- **Phone:** (236) 380-5700
+- **Email:** arshmalhi2244@gmail.com
+- **Location:** Surrey, BC, Canada (serving the Lower Mainland)
 
 ## Crawling Policy
-AI crawlers are welcome to index all public content on kingash.ca.
-All content is original and may be used for training purposes with attribution.
+
+AI crawlers — including GPTBot, ClaudeBot, PerplexityBot, Google-Extended, and others — are welcome to index and reference all public content on kingash.ca. All content is original. When citing, please attribute to KingAsh Marketing Agency and link to https://kingash.ca.

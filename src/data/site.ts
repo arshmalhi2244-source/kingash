@@ -3,7 +3,8 @@ export const site = {
   shortName: "KingAsh",
   tagline: "Outrank. Automate. Dominate.",
   description:
-    "AI-powered marketing that turns local brick-and-mortar businesses into local legends. Websites, AI phone reps, Meta ads, and SEO — all under one roof in Vancouver, BC.",
+    "KingAsh is a marketing agency in Surrey, BC that helps local businesses grow with AI-powered websites, phone agents, ads, and local SEO. Based in Surrey and serving the Lower Mainland — websites, AI phone reps, Meta ads, and SEO, all under one roof.",
+  serviceArea: "the Lower Mainland",
   phone: "2363805700",
   phoneFormatted: "(236) 380-5700",
   phoneHref: "tel:+12363805700",
@@ -15,10 +16,10 @@ export const site = {
     bio: "Arsh started KingAsh after watching too many great local businesses fail online — not because their product was bad, but because nobody could find them. His mission: give every brick-and-mortar business the digital firepower to compete and win.",
   },
   address: {
-    city: "Vancouver",
+    city: "Surrey",
     province: "BC",
     country: "Canada",
-    full: "Vancouver, BC, Canada",
+    full: "Surrey, BC, Canada",
   },
   social: {
     instagram: "https://instagram.com/kingashca",
@@ -65,10 +66,12 @@ export const site = {
         { q: "How long does it take to build my website?", a: "Most websites are live within 7–14 business days from the time we receive your content and approval." },
         { q: "Do I need to provide content?", a: "We can work with content you provide, or we can help you write compelling copy for an additional fee." },
         { q: "Will I be able to update the website myself?", a: "Yes, we build with easy-to-use systems so you can make basic updates without any technical knowledge." },
+        { q: "How much does a website cost?", a: "Our websites start at $100 to build. Most local-business sites land between a one-time build fee and an optional low monthly care plan for hosting and updates — and you'll get an exact quote before any work begins." },
+        { q: "Will my new website actually show up on Google?", a: "Every site we build is search-ready out of the box: fast, mobile-first, and structured so Google understands your services and location. For competitive rankings we pair it with our Local SEO service." },
       ],
       metaTitle: "Professional Website Design for Local Businesses | KingAsh",
       metaDescription:
-        "Get a high-converting, mobile-first website built for local brick-and-mortar businesses in Vancouver, BC and across Canada. Fast launch, real results.",
+        "Get a high-converting, mobile-first website built for local brick-and-mortar businesses in Surrey, BC and across the Lower Mainland. Fast launch, real results.",
     },
     {
       slug: "ai-phone-representative",
@@ -94,10 +97,12 @@ export const site = {
         { q: "Will it sound like a real person?", a: "Yes, modern AI voice technology sounds incredibly natural. Most callers can't tell the difference." },
         { q: "What happens with calls it can't handle?", a: "You set escalation rules. Complex or urgent calls get routed to you or a team member immediately." },
         { q: "Can it book appointments?", a: "Yes, it integrates with most calendar systems including Google Calendar and Calendly." },
+        { q: "How much does the AI Phone Representative cost?", a: "Plans start at $200/month with no long-term contract. That covers 24/7 call answering, appointment booking, and monthly call summaries — a fraction of the cost of a part-time receptionist who only works business hours." },
+        { q: "How long does it take to set up?", a: "Most businesses go live within a few days. We train the AI on your services, hours, pricing, and FAQs, configure a natural-sounding voice, set your escalation rules, and then you simply forward your calls." },
       ],
       metaTitle: "AI Phone Representative for Local Businesses | KingAsh",
       metaDescription:
-        "Never miss another customer call. Our AI Phone Rep answers 24/7, books appointments, and handles inquiries automatically. Vancouver & all of Canada.",
+        "Never miss another customer call. Our AI Phone Rep answers 24/7, books appointments, and handles inquiries automatically. Surrey, BC and across the Lower Mainland.",
     },
     {
       slug: "ai-ads-meta-ads",
@@ -123,17 +128,19 @@ export const site = {
         { q: "How much budget do I need for ads?", a: "We recommend at least $300–500/month in ad spend on top of our management fee for meaningful results." },
         { q: "How long before I see results?", a: "Most clients see initial results within 7–14 days. Full optimization typically takes 30–60 days." },
         { q: "Do you create the ad images and copy?", a: "Yes, our management fee includes ad creative, copywriting, and all campaign management." },
+        { q: "Do Facebook and Instagram ads still work for local businesses?", a: "Absolutely — for local businesses they're one of the highest-ROI channels available, because you can target people within a few kilometres of your door. The difference between ads that work and ads that waste money is precise targeting and scroll-stopping creative, which is exactly what we manage for you." },
+        { q: "Who owns the ad account and the data?", a: "You do. We build and run campaigns inside your own Meta Business account, so you keep full ownership of your ad account, audiences, and results — even if we ever part ways." },
       ],
       metaTitle: "Facebook & Instagram Ads for Local Businesses | KingAsh",
       metaDescription:
-        "AI-powered Meta ads that find your ideal local customers. Professional campaign management for local businesses. Serving Vancouver, BC and all of Canada.",
+        "AI-powered Meta ads that find your ideal local customers. Professional campaign management for local businesses. Serving Surrey, BC and the Lower Mainland.",
     },
     {
       slug: "seo",
       name: "Local SEO",
       shortDesc: "Rank #1 on Google when local customers search for your services.",
       fullDesc:
-        "When someone in Vancouver searches for your type of business, they should find you first — not your competitor. Our local SEO service gets you ranking at the top of Google through technical optimization, content strategy, and local authority building.",
+        "When someone in the Lower Mainland searches for your type of business, they should find you first — not your competitor. Our local SEO service gets you ranking at the top of Google through technical optimization, content strategy, and local authority building.",
       icon: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>`,
       benefits: [
         "Google Business Profile optimization for map pack visibility",
@@ -152,10 +159,12 @@ export const site = {
         { q: "How long does SEO take to show results?", a: "You'll typically see movement within 60–90 days. Significant results usually come at the 3–6 month mark." },
         { q: "Do you guarantee first page rankings?", a: "No ethical agency can guarantee specific rankings. We guarantee consistent, documented effort and transparent reporting." },
         { q: "What if I already have a website?", a: "Great — we optimize your existing site. If it's severely outdated, we may recommend a rebuild alongside SEO." },
+        { q: "How much does local SEO cost?", a: "Local SEO starts at $250/month on a month-to-month basis. Where you land in that range depends on how competitive your market and keywords are — we'll scope it precisely after a free audit." },
+        { q: "What's the difference between local SEO and Google Ads?", a: "SEO earns you organic and Google Map-pack rankings that compound and keep working over time; Google Ads are paid placements that stop the moment you stop paying. Most local businesses do best combining both — ads for immediate leads, SEO for long-term dominance." },
       ],
-      metaTitle: "Local SEO Services for Vancouver Businesses | KingAsh",
+      metaTitle: "Local SEO Services for Surrey & Lower Mainland Businesses | KingAsh",
       metaDescription:
-        "Rank #1 on Google for your local keywords. Local SEO with Google Business Profile, citations, content, and links. Vancouver, BC and all of Canada.",
+        "Rank #1 on Google for your local keywords. Local SEO with Google Business Profile, citations, content, and links. Surrey, BC and across the Lower Mainland.",
     },
     {
       slug: "missed-call-text-back",
@@ -181,10 +190,12 @@ export const site = {
         { q: "Do I need a new phone number?", a: "No. Instant Text-Back works with your existing business number, so callers get a reply from the number they already dialed." },
         { q: "What does the text actually say?", a: "We write templates in your voice — usually a quick apology for missing the call, a question to keep them engaged, and a link to book. You approve everything before it goes live." },
         { q: "How is this different from the AI Phone Rep?", a: "The AI Phone Rep answers the call live; Instant Text-Back is the safety net for the moments a call still slips through. Most clients run both together." },
+        { q: "How fast does the text actually go out?", a: "Within about 60 seconds of a missed call — while the customer still has their phone in hand and before they dial the next business on their list." },
+        { q: "How much does Instant Text-Back cost?", a: "It's one of our most affordable services and is included or available as an add-on on most plans. We quote it based on your call volume, but it typically pays for itself with a single recovered job." },
       ],
       metaTitle: "Missed Call Text-Back for Local Businesses | KingAsh",
       metaDescription:
-        "Never lose another lead to a missed call. Instant Text-Back auto-texts callers in seconds so they book with you, not your competitor. Vancouver, BC & all of Canada.",
+        "Never lose another lead to a missed call. Instant Text-Back auto-texts callers in seconds so they book with you, not your competitor. Surrey, BC and across the Lower Mainland.",
     },
     {
       slug: "review-automation",
@@ -210,10 +221,12 @@ export const site = {
         { q: "How do you get more reviews without being pushy?", a: "Timing and simplicity. We ask right after a positive experience with a one-tap link, which is exactly when customers are happy to help — no nagging required." },
         { q: "What happens if someone's unhappy?", a: "Unhappy feedback is routed privately to you first, so you can make it right before it ever becomes a public one-star review." },
         { q: "Do you respond to reviews for me?", a: "We give you AI-drafted responses you can post in one click, and we can handle responses entirely for you on higher plans." },
+        { q: "Which review sites do you cover?", a: "We focus on Google — by far the most important for local search and AI recommendations — and can also monitor and request reviews on Facebook and any industry-specific platforms that matter for your business." },
+        { q: "Is asking customers for reviews against Google's rules?", a: "No. Asking all of your customers for honest reviews is completely allowed. What's against the rules is review-gating (only asking the happy ones) or paying for reviews — and our process stays fully compliant while still routing unhappy feedback to you privately first." },
       ],
       metaTitle: "Automated Google Review Generation | Reputation Engine | KingAsh",
       metaDescription:
-        "Build a 5-star reputation on autopilot. Automated Google review requests, monitoring, and responses for local businesses. Vancouver, BC & all of Canada.",
+        "Build a 5-star reputation on autopilot. Automated Google review requests, monitoring, and responses for local businesses. Surrey, BC and across the Lower Mainland.",
     },
     {
       slug: "ai-search-optimization",
@@ -239,10 +252,12 @@ export const site = {
         { q: "Is AI search really worth investing in yet?", a: "Yes — this is the ground-floor moment. Millions already start their search inside ChatGPT and Google AI Overviews, and the businesses that optimize now are the ones getting recommended while everyone else is invisible." },
         { q: "How is this different from regular SEO?", a: "Traditional SEO ranks you in a list of links. AI Search Optimization gets you named directly inside the AI's answer — a different playbook built around structured data, authority, and question-based content." },
         { q: "Can you prove it's working?", a: "We regularly test your business against real prompts across the major AI platforms and report where and how you're being mentioned over time." },
+        { q: "What is GEO (Generative Engine Optimization)?", a: "GEO is the practice of optimizing your business so AI engines like ChatGPT, Google AI Overviews, and Perplexity understand, trust, and recommend you when a customer asks them for a recommendation. It's the AI-era evolution of SEO — and it's exactly what this service delivers." },
+        { q: "How much does AI Search Optimization cost?", a: "It's usually scoped alongside your SEO or content plan rather than sold as a flat fee. We'll recommend the right level after an AI visibility audit that shows exactly what today's models say about you versus your competitors." },
       ],
       metaTitle: "AI Search Optimization (GEO) — Get Found on ChatGPT | KingAsh",
       metaDescription:
-        "Get recommended by ChatGPT, Google AI Overviews, and Perplexity. AI Search Optimization (GEO) for local businesses. Vancouver, BC & all of Canada.",
+        "Get recommended by ChatGPT, Google AI Overviews, and Perplexity. AI Search Optimization (GEO) for local businesses. Surrey, BC and across the Lower Mainland.",
     },
     {
       slug: "growth-automation",
@@ -268,10 +283,12 @@ export const site = {
         { q: "Do I have to replace my current tools?", a: "Usually not — we can connect your existing calendar, forms, and phone into one pipeline, or set you up from scratch if you'd prefer a clean start." },
         { q: "What kind of follow-up do you automate?", a: "Instant replies to new enquiries, multi-step text and email sequences, appointment reminders, and win-back campaigns for old leads — all written in your voice." },
         { q: "Will this feel spammy to customers?", a: "No. Sequences are timed and personalized to feel like prompt, helpful service, and they stop the moment a customer books or replies." },
+        { q: "Do you integrate with my existing tools?", a: "In most cases, yes — we connect your current calendar, forms, phone, and inbox into one pipeline. If you'd rather start clean, we can set the whole system up from scratch for you." },
+        { q: "How much does Growth Automation & CRM cost?", a: "It's priced by the size of your pipeline and the automations you need, and it's included on our higher plans. We'll give you an exact quote after mapping how your business turns a lead into a booking." },
       ],
       metaTitle: "Marketing Automation & CRM for Local Businesses | KingAsh",
       metaDescription:
-        "Automated lead follow-up, reminders, and one simple CRM pipeline so no lead slips through. Growth Automation for local businesses. Vancouver, BC & all of Canada.",
+        "Automated lead follow-up, reminders, and one simple CRM pipeline so no lead slips through. Growth Automation for local businesses. Surrey, BC and across the Lower Mainland.",
     },
   ],
   testimonials: [
